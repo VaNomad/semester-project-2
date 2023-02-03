@@ -3,13 +3,15 @@
   "version": "0.0.1",
   "description": "Noroff Semester Project 2",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sass src/scss:dist/css",
     "start": "sass --watch src/scss:dist/css & live-server",
     "format": "prettier -w src/*/.js",
     "lint": "eslint src/**/*.js",
-    "lint-fix": "eslint src/**/*.js --cache --fix"
+    "lint-fix": "eslint src/**/*.js --cache --fix",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -28,11 +30,25 @@
   "homepage": "https://github.com/VaNomad/semester-project-2#readme",
   "devDependencies": {
     "eslint": "^8.33.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
     "live-server": "^1.2.2",
     "prettier": "^2.8.3",
     "sass": "^1.58.0"
   },
   "dependencies": {
     "bootstrap": "^5.2.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
   }
 }
