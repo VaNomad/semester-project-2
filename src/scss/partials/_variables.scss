@@ -1,0 +1,23 @@
+// scss-docs-start color-variables
+$purple: #3d3044;
+$purple-lighter: #453a4b;
+$purple-dark: #812f95;
+$purple-bright: #d02896;
+$grey: #d0d0d0;
+$red: #f27b7e;
+$green: #24be00;
+// scss-docs-end color-variable
+
+// scss-docs-start theme-color-variables
+$primary: $purple;
+$secondary: $purple-lighter;
+$success: $green;
+$info: $grey;
+$danger: $red;
+// scss-docs-end theme-color-variables
+// $font-family-sans-serif: 'Kanit', sans-serif;
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Kanit,
+  "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: Kanit, SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
