@@ -1,8 +1,8 @@
-// Bootstrap Styles
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
 // Bootstrap Variable Overrides
 @import "./partials/variables";
+
+// Bootstrap Styles
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 // Custom Styles
 @import "./partials/navbar";
