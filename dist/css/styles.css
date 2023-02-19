@@ -10777,6 +10777,23 @@ textarea.form-control-lg {
   align-items: center;
 }
 
+.banner-img {
+  width: 80%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.text-overlay {
+  margin-top: -60vh;
+  margin-left: 55vw;
+}
+
+.banner-h1 {
+  font-family: "Kanit", sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
 body {
   font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", "Kanit", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
 }
