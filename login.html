@@ -68,7 +68,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-2" href="/login.html">
+                <a class="nav-link mx-2" href="#">
                   <img
                     src="/assets/vectors/login.png"
                     alt="Logo"
@@ -85,65 +85,52 @@
           </div>
         </div>
       </nav>
-      <div class="banner">
-        <div class="row">
-          <div class="col">
-            <img
-              src="/assets/images/pexels-elijah-o'donnell-3439214.jpg"
-              class="banner-img img-fluid w-100 h-75"
-              alt="banner image of young woman looking at smartphone"
-            />
-            <div class="text-overlay z-1">
-              <div
-                class="navbar-brand text-white text-opacity-75 text-center"
-                href="#"
-              >
-                <img
-                  src="/assets/vectors/heartLogo_purple.png"
-                  alt="Logo"
-                  width="30"
-                  height="30"
-                  class="d-inline-block mb-1"
-                />
-                CYBID
-              </div>
-              <h1 class="banner-h1 text-white text-center display-3 fw-bold">
-                FASHION AUCTION
-              </h1>
-              <p class="banner-tagline text-danger text-center fs-4">
-                HOTTEST DEALS ANYWHERE
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </header>
 
-    <main>
-      <div class="container bg-secondary rounded">
-        <nav class="navbar bg-transparent rounded">
-          <div class="container">
-            <a class="navbar-brand text-white-50">LISTINGS</a>
-            <form class="d-flex justify-content-between">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </form>
+    <div class="text-center">
+      <main class="form-signin">
+        <form>
+          <img
+            class="mb-4"
+            src="/assets/vectors/heartLogo_purple.png"
+            alt=""
+            width="72"
+            height="57"
+          />
+          <h1 class="h3 mb-3 fw-bolder text-white-50">Please sign in</h1>
+          <div class="form-floating">
+            <input
+              type="email"
+              class="form-control"
+              id="floatingInput"
+              placeholder="name@example.com"
+            />
+            <label for="floatingInput">Email address</label>
           </div>
-        </nav>
-        <div class="row">
-          <div class="col text-white-50">LISTING</div>
-          <div class="col text-white-50">LISTING</div>
-          <div class="col text-white-50">LISTING</div>
-        </div>
-      </div>
-    </main>
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control"
+              id="floatingPassword"
+              placeholder="Password"
+            />
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me" /> Remember me
+            </label>
+          </div>
+          <button
+            class="w-100 btn btn-lg btn-primary text-success btn-outline-success"
+            type="submit"
+          >
+            Sign in
+          </button>
+          <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
+        </form>
+      </main>
+    </div>
 
     <footer></footer>
   </body>
