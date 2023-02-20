@@ -8,14 +8,18 @@
       href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/fbce6b241f.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" defer href="/dist/css/styles.css" />
     <title>Document</title>
   </head>
 
-  <body>
+  <body class="bg-primary">
     <header>
-      <nav class="navbar navbar-expand-lg bg-primary">
+      <nav class="navbar navbar-expand-lg bg-primary p-0">
         <div class="container-fluid">
           <a class="navbar-brand text-white" href="#">
             <img
@@ -46,8 +50,8 @@
                     src="/assets/vectors/home.png"
                     aria-current="page"
                     alt="Logo"
-                    width="30"
-                    height="30"
+                    width="25"
+                    height="25"
                     class="d-inline-block mb-1"
                   />
                 </a>
@@ -57,8 +61,8 @@
                   <img
                     src="/assets/vectors/fat-info.png"
                     alt="Logo"
-                    width="30"
-                    height="30"
+                    width="25"
+                    height="25"
                     class="d-inline-block mb-1"
                   />
                 </a>
@@ -68,8 +72,8 @@
                   <img
                     src="/assets/vectors/login.png"
                     alt="Logo"
-                    width="30"
-                    height="30"
+                    width="25"
+                    height="25"
                     class="d-inline-block mb-1"
                   />
                 </a>
@@ -90,7 +94,10 @@
               alt="banner image of young woman looking at smartphone"
             />
             <div class="text-overlay z-1">
-              <div class="navbar-brand text-warning text-center" href="#">
+              <div
+                class="navbar-brand text-white text-opacity-75 text-center"
+                href="#"
+              >
                 <img
                   src="/assets/vectors/heartLogo_purple.png"
                   alt="Logo"
@@ -100,9 +107,11 @@
                 />
                 CYBID
               </div>
-              <h1 class="banner-h1 text-white text-center">FASHION AUCTION</h1>
+              <h1 class="banner-h1 text-white text-center display-3 fw-bold">
+                FASHION AUCTION
+              </h1>
               <p class="banner-tagline text-danger text-center fs-4">
-                BEST DEALS ANYWHERE
+                HOTTEST DEALS ANYWHERE
               </p>
             </div>
           </div>
@@ -110,7 +119,31 @@
       </div>
     </header>
 
-    <main></main>
+    <main>
+      <div class="container bg-secondary rounded">
+        <nav class="navbar bg-transparent rounded">
+          <div class="container">
+            <a class="navbar-brand text-white-50">LISTINGS</a>
+            <form class="d-flex justify-content-between">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+        </nav>
+        <div class="row">
+          <div class="col text-white-50">LISTING</div>
+          <div class="col text-white-50">LISTING</div>
+          <div class="col text-white-50">LISTING</div>
+        </div>
+      </div>
+    </main>
 
     <footer></footer>
   </body>
