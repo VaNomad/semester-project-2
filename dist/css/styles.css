@@ -10797,4 +10797,10 @@ body {
   font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", "Kanit", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
 }
 
+.avatar-img {
+  object-fit: cover;
+  height: 350px;
+  width: 350px;
+}
+
 /*# sourceMappingURL=styles.css.map */
