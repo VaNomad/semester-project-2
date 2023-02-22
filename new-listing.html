@@ -1,123 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fbce6b241f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" defer href="/dist/css/styles.css" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap"
-    rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/fbce6b241f.js" crossorigin="anonymous"></script>
-  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" defer href="/dist/css/styles.css" />
-  <title>Document</title>
-</head>
-
-<body class="bg-primary">
-  <header>
-    <nav class="navbar navbar-expand-lg bg-primary p-0">
-      <div class="container-fluid">
-        <a class="navbar-brand text-white" href="#">
-          <img src="/assets/vectors/heartLogo_purple.png" alt="Logo" width="30" height="30"
-            class="d-inline-block mb-1" />
-          CYBID
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active mx-2" href="#">
-                <img src="/assets/vectors/home.png" aria-current="page" alt="Home icon link" width="25" height="25"
-                  class="d-inline-block mb-1" />
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="/about.html">
-                <img src="/assets/vectors/fat-info.png" alt="About icon link" width="25" height="25"
-                  class="d-inline-block mb-1" />
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="/new-listing.html">
-                <img src="/assets/vectors/add-listing.png" alt="Add listing icon link" width="25" height="25"
-                  class="d-inline-block mb-1" />
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="/login.html">
-                <img src="/assets/images/woman-gaa9f04541_640.jpg" alt="Profile image" width="25" height="25"
-                  class="d-inline-block mb-1 rounded-circle" />
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="/login.html">
-                <img src="/assets/vectors/logout-icon.png" alt="Log out icon" width="20" height="20"
-                  class="d-inline-block mb-1" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <h1 class="text-white-50 banner-h1 fs-2 fw-bold text-center">CREATE NEW LISTING</h1>
-    <div class="container-lg bg-secondary rounded text-center text-white">
-      <div class="row">
-        <div class="col">
-          <div class="d-flex justify-content-center p-5">
-            <div class="big-img p-5"></div>
+  <body class="bg-primary">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-primary p-0">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="#">
+            <img
+              src="/assets/vectors/heartLogo_purple.png"
+              alt="Logo"
+              width="30"
+              height="30"
+              class="d-inline-block mb-1"
+            />
+            CYBID
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active mx-2" href="#">
+                  <img
+                    src="/assets/vectors/home.png"
+                    aria-current="page"
+                    alt="Home icon link"
+                    width="25"
+                    height="25"
+                    class="d-inline-block mb-1"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="/about.html">
+                  <img
+                    src="/assets/vectors/fat-info.png"
+                    alt="About icon link"
+                    width="25"
+                    height="25"
+                    class="d-inline-block mb-1"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="/new-listing.html">
+                  <img
+                    src="/assets/vectors/add-listing.png"
+                    alt="Add listing icon link"
+                    width="25"
+                    height="25"
+                    class="d-inline-block mb-1"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="/login.html">
+                  <img
+                    src="/assets/images/woman-gaa9f04541_640.jpg"
+                    alt="Profile image"
+                    width="25"
+                    height="25"
+                    class="d-inline-block mb-1 rounded-circle"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="/login.html">
+                  <img
+                    src="/assets/vectors/logout-icon.png"
+                    alt="Log out icon"
+                    width="20"
+                    height="20"
+                    class="d-inline-block mb-1"
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
-          <div class="d-flex justify-content-around pb-5">
-            <div class="small-img ms-5"></div>
-            <div class="small-img"></div>
-            <div class="small-img me-5"></div>
-          </div>
         </div>
-        <div class="col register-form">
-          <form>
-            <div class="container">
-              <div class="row bg-secondary rounded p-5">
-                <div class="col inner-form rounded mx-auto">
-                  <div class="form-floating mb-5">
-                    <input type="title" class="form-control" id="floatingInput" placeholder="Title">
-                    <label class="text-dark" for="floatingInput">TITLE</label>
-                  </div>
-                  <div class="form-floating mb-5">
-                    <textarea class="form-control" id="floatingInput" rows="5">
-                    <label class="text-dark form-control" for="floatingInput">DESCRIPTION</label>
-                  </div>
-                  <div class="form-floating mb-5">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label class="text-dark" for="floatingPassword">Password</label>
-                  </div>
-                  <div class="form-floating d-flex justify-content-between mb-5">
-                    <div>
-                      <input type="date" name="date" class="rounded border-0 fs-5 banner-h1 text-uppercase py-2 px-3">
-                    </div>
-                    <div>
-                      <input type="time" name="time" class="rounded border-0 fs-5 banner-h1 text-uppercase py-2 px-5" id="floatingInput">
-                    </div>
-                  </div>
-                  <button class="w-100 px-5 mt-2 btn btn-lg btn-outline-success" type="submit">
-                    Register
-                  </button>
-                </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="text-white-50 banner-h1 fs-2 fw-bold text-center">
+        CREATE NEW LISTING
+      </h1>
+      <div class="container-lg bg-secondary rounded text-center text-white">
+        <div class="row">
+          <div class="col">
+            <div class="d-flex justify-content-center p-5">
+              <div
+                class="big-img d-flex justify-content-center align-items-center p-5"
+              >
+                <h1 class="text-black-50 fs-5">ADD IMG</h1>
               </div>
             </div>
+            <div class="d-flex justify-content-around pb-5">
+              <div
+                class="small-img d-flex ms-5 justify-content-center align-items-center"
+              >
+                <h2 class="text-black-50 fs-6">ADD IMG</h2>
+              </div>
+              <div
+                class="small-img d-flex justify-content-center align-items-center"
+              >
+                <h2 class="text-black-50 fs-6">ADD IMG</h2>
+              </div>
+              <div
+                class="small-img d-flex me-5 justify-content-center align-items-center"
+              >
+                <h2 class="text-black-50 fs-6">ADD IMG</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col register-form">
+            <form>
+              <div class="container">
+                <div class="row bg-secondary rounded p-5">
+                  <div class="col inner-form rounded mx-auto">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="title"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="Title"
+                      />
+                      <label class="text-dark" for="floatingInput">TITLE</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <label class="text-dark" for="textarea"
+                        >DESCRIPTION</label
+                      >
+                      <textarea
+                        class="form-control h-100"
+                        id="textarea"
+                        rows="8"
+                      ></textarea>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="floatingPassword"
+                        placeholder="Password"
+                      />
+                      <label class="text-dark" for="floatingPassword"
+                        >Password</label
+                      >
+                    </div>
+                    <div
+                      class="form-floating d-flex justify-content-between mb-5"
+                    >
+                      <div>
+                        <input
+                          type="date"
+                          name="date"
+                          class="rounded border-0 fs-5 banner-h1 text-uppercase py-2 px-3"
+                        />
+                      </div>
+                      <div>
+                        <input
+                          type="time"
+                          name="time"
+                          class="rounded border-0 fs-5 banner-h1 text-uppercase py-2 px-5"
+                          id="floatingInput"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      class="w-100 px-5 py-3 mt-2 btn btn-lg btn-outline-success"
+                      type="submit"
+                    >
+                      CREATE NEW LISTING
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-        <p class="mt-5 mb-3 text-muted">Sjur Hassel © 2023</p>
-        </form>
       </div>
-    </div>
-    </div>
-  </main>
+    </main>
 
-  <footer></footer>
-</body>
+    <footer>
+      <div class="d-flex justify-content-center">
+        <p class="mt-5 mb-3 text-muted">Sjur Hassel © 2023</p>
+      </div>
+    </footer>
+  </body>
 </html>
