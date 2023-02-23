@@ -120,7 +120,7 @@
                 <h1 class="text-black-50 fs-5">ADD IMG</h1>
               </div>
             </div>
-            <div class="d-flex justify-content-around pb-5">
+            <div class="d-flex justify-content-around py-4">
               <div
                 class="small-img d-flex ms-5 justify-content-center align-items-center"
               >
@@ -176,14 +176,19 @@
                     <div
                       class="form-floating d-flex justify-content-between mb-5"
                     >
-                      <div>
+                      <div class="d-flex flex-column text-start">
+                        <label for="dateInput" class="form-label">DATE</label>
                         <input
                           type="date"
                           name="date"
                           class="rounded border-0 fs-5 banner-h1 text-uppercase py-2 px-3"
+                          id="dateInput"
                         />
                       </div>
-                      <div>
+                      <div class="d-flex flex-column text-start">
+                        <label for="floatingInput" class="form-label"
+                          >TIME</label
+                        >
                         <input
                           type="time"
                           name="time"
@@ -193,7 +198,7 @@
                       </div>
                     </div>
                     <button
-                      class="w-100 px-5 py-3 mt-2 btn btn-lg btn-outline-success"
+                      class="w-100 px-5 py-3 btn btn-lg btn-outline-success"
                       type="submit"
                     >
                       CREATE NEW LISTING
