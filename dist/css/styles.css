@@ -10792,10 +10792,15 @@ textarea.form-control-lg {
 
 .banner-h1 {
   font-family: "Kanit", sans-serif;
+  letter-spacing: 5px;
 }
 
 body {
   font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", "Kanit", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+}
+
+p {
+  color: #d0d0d0;
 }
 
 .avatar-img {
@@ -10818,6 +10823,12 @@ body {
   object-fit: cover;
   border-radius: 5px;
   background-color: #fff;
+}
+
+.body-h2 {
+  font-family: "Kanit", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=styles.css.map */
