@@ -10803,6 +10803,14 @@ p {
   color: #d0d0d0;
 }
 
+h1, .h1 {
+  color: #989898;
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
 .avatar-img {
   object-fit: cover;
   height: 350px;
