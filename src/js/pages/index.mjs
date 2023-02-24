@@ -4,7 +4,6 @@ import {
 
 const listingItems = document.querySelector('#listingItems');
 
-
 const action = "/listings";
 
 const listingCardsUrl = (API_AUCTION_URL + action);
