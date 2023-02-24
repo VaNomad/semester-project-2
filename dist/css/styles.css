@@ -10795,6 +10795,13 @@ textarea.form-control-lg {
   letter-spacing: 5px;
 }
 
+.card-image {
+  max-height: 250px;
+  min-width: 100%;
+  object-fit: contain;
+  z-index: 0;
+}
+
 body {
   font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", "Kanit", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
 }
