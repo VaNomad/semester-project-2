@@ -2,7 +2,7 @@ import {
   API_AUCTION_URL
 } from "../api/constants.mjs";
 
-const listingItems = document.querySelector('#listingItems');
+const listingItems = document.querySelector("#listingItems");
 
 const action = "/listings";
 
@@ -53,3 +53,4 @@ async function listingCards() {
   }
 }
 listingCards();
+

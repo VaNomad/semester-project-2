@@ -14,6 +14,7 @@
     ></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/src/js/pages/index.mjs" type="module" defer></script>
+    <script src="/src/js/user/search.mjs" type="module" defer></script>
     <link rel="stylesheet" defer href="/dist/css/styles.css" />
     <title>Document</title>
   </head>
@@ -125,9 +126,10 @@
         <nav class="navbar">
           <div class="container">
             <h1 class="navbar-brand text-white-50">LISTINGS</h1>
-            <form class="d-flex justify-content-between">
+            <form class="d-flex justify-content-between" id="searchForm">
               <input
                 class="form-control me-2"
+                id="searchValue"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
