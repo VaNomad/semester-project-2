@@ -1,8 +1,4 @@
 import { register } from "../auth/register.mjs";
-import { API_AUCTION_URL } from "../api/constants.mjs";
-
-const action = "/auth/register";
-const regURL = (API_AUCTION_URL + action);
 
 const regForm = document.querySelector("#regForm");
 const regMsg = document.querySelector("#regMsg");
@@ -37,5 +33,5 @@ regForm.addEventListener("submit", async (event) => {
   }
   
 
-  register(regURL, profile, regForm);
+  register(profile, regForm);
 });

@@ -1,8 +1,8 @@
+import { API_AUCTION_REGISTER_URL } from "../api/constants.mjs";
 
+console.log(API_AUCTION_REGISTER_URL);
 
-
-
-export async function register(regURL, data) {
+export async function register(url, data) {
   try {
     const userReg = {
       headers: {
@@ -12,7 +12,7 @@ export async function register(regURL, data) {
       body: JSON.stringify(data),
     };
 
-    const response = await fetch(regURL, userReg);
+    const response = await fetch(url, userReg);
     console.log(response);
 
     alert("You are now registered");
