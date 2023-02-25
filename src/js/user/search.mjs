@@ -3,6 +3,7 @@ import { API_AUCTION_URL } from "../api/constants.mjs";
 const action = "/listings?_tag";
 const searchURL = (API_AUCTION_URL + action);
 
+const noResults = document.querySelector("#noResults");
 const searchItems = document.querySelector("#listingItems");
 const searchForm = document.querySelector("#searchForm");
 const searchValue = document.querySelector("#searchValue");
@@ -19,10 +20,29 @@ async function searchCall() {
 
     const response = await fetch(`${searchURL}=${searchValue.value}`, data);
     const results = await response.json();
+    console.log(results);
+
+    if (results < 1) {
+      noResults.innerHTML = `
+
+      <div class="card bg-primary bg-opacity-75 border-danger banner-h1 text-center p-5 ms-3 mb-5">
+                                <div class="p-3">
+                                  <h5 class="fs-4 fw-bold text-danger">NO ITEMS WERE FOUND!</h5>
+                                </div>
+                                <div class="p-1">
+                                  <img src="/assets/vectors/heartLogo_logout.png" height="60">
+                                </div>
+                                <div class="p-3">
+                                  <h5 class="fs-4 fw-bold text-warning">TRY A DIFFERENT SEARCH</h5>
+                                </div>
+
+      `;
+    }
+    
     searchItems.innerHTML = "";
     results.forEach((search) => {
       searchItems.innerHTML += `
-            
+      
       <div class="col-lg-4 col-md-6 col-xs-12 text-white-50 p-0">
         <div class="card border-0 bg-secondary bg-opacity-75 m-3 p-3">
           <img src="${
@@ -45,10 +65,10 @@ async function searchCall() {
             <div><small class="text-muted"> LAST UPDATED: ${new Date(search.updated).toLocaleDateString()}</small></div>
           </div>
         </div>
-      </div>
-          
-          
-          `;
+      </div>`;
+      console.log(results);
+      
+      
     });
   } catch (error) {
     console.log(error);
@@ -60,6 +80,7 @@ searchForm.addEventListener("submit", (e) => {
   const searchForm = e.target;
   console.log(searchForm);
   searchCall();
+  searchForm.reset();
 });
 
 
