@@ -41,6 +41,7 @@ async function searchCall() {
     
     searchItems.innerHTML = "";
     results.forEach((search) => {
+
       searchItems.innerHTML += `
       
       <div class="col-lg-4 col-md-6 col-xs-12 text-white-50 p-0">
@@ -52,7 +53,7 @@ async function searchCall() {
             <div class="heart">
               <img src="/assets/vectors/heartLogo_green.png" width="30" alt="" />
             </div>
-            <p class="text-dark ms-1 fs-5">${search.bids}</p>
+            <p class="text-dark ms-1 fs-5">${search._count}</p>
           </div>
           <div class="card-body bg-primary">
             <h5 class="card-title text-white">${search.title}</h5>

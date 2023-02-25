@@ -19,6 +19,12 @@ async function listingCards() {
     console.log(results);
     listingItems.innerHTML = "";
     results.forEach((listing) => {
+
+      // const sortedListings = listing.sort((a, b) => {
+      //   return b.bids.amount - a.bids.amount
+      // });
+
+
       listingItems.innerHTML += `
             
         <div class="col-lg-4 col-md-6 col-xs-12 text-white-50 p-0">
@@ -30,7 +36,7 @@ async function listingCards() {
               <div class="heart">
                 <img src="/assets/vectors/heartLogo_green.png" width="30" alt="" />
               </div>
-              <p class="text-dark ms-1 fs-5">${listing.bids}</p>
+              <p class="text-dark ms-1 fs-5">${listing._count.bids}</p>
             </div>
             <div class="card-body bg-primary">
               <h5 class="card-title text-white">${listing.title}</h5>
