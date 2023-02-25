@@ -26,6 +26,8 @@ export async function loginUser(url, data) {
       window.location.replace("/indexIn.html");
 
       storage.save("token", accessToken);
+      console.log(accessToken);
+      
 
       storage.save("profile", profile);
 
