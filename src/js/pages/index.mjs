@@ -15,15 +15,27 @@ async function listingCards() {
     if (!response.ok) {
       return "error", `Could not get the listings from the server`;
     }
+
+    
+
     const results = await response.json();
     console.log(results);
     listingItems.innerHTML = "";
     results.forEach((listing) => {
 
+
+      // ——————————————————————————————————————————————————————————highest bid sorting
       // const sortedListings = listing.sort((a, b) => {
       //   return b.bids.amount - a.bids.amount
       // });
-
+      
+      // const sortedListings = sortedListings.map((sortedListing) => {
+      //   sortedListing.bids.sort((a, b) => {
+      //     return a.amount - b.amount;
+      //   });
+      //   console.log(sortedListing);
+      // });
+      // ———————————————————————————————————————————————————————————————————————————————
 
       listingItems.innerHTML += `
             
