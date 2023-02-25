@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/js/user/login.mjs" type="module" defer></script>
     <link rel="stylesheet" defer href="/dist/css/styles.css" />
     <title>Document</title>
   </head>
@@ -88,18 +89,21 @@
     </header>
 
     <div class="d-flex justify-content-center align-content-center text-center">
-      <form>
-        <img
-          class="mb-4"
-          src="/assets/vectors/heartLogo_purple.png"
-          alt=""
-          width="92"
-          height="92"
-        />
-        <h1 class="mb-3 fw-bolder text-white-50">LOG IN</h1>
+      <form id="loginForm">
+        <div class="regMsg" id="regMsg">
+          <img
+            class="mb-4"
+            src="/assets/vectors/heartLogo_purple.png"
+            alt=""
+            width="92"
+            height="92"
+          />
+          <h1 class="mb-3 fw-bolder text-white-50">LOG IN</h1>
+        </div>
         <div class="form-floating mb-3">
           <input
             type="email"
+            name="email"
             class="form-control"
             id="floatingInput"
             placeholder="name@example.com"
@@ -109,37 +113,29 @@
         <div class="form-floating mb-3">
           <input
             type="password"
+            name="password"
             class="form-control"
             id="floatingPassword"
             placeholder="Password"
           />
           <label for="floatingPassword">Password</label>
         </div>
-        <!-- <div class="checkbox mb-3">
-            <label>
-              <input type="checkbox" value="remember-me" /> Remember me
-            </label>
-          </div> -->
         <div class="buttons d-flex">
-          <!-- <button
+          <button
             class="w-100 px-5 me-2 btn btn-lg btn-outline-success"
             type="submit"
           >
-            Sign in
-          </button> -->
-          <a
-            class="w-100 px-5 me-2 btn btn-lg btn-outline-success"
-            role="button"
-            href="/indexIn.html"
-          >
-            logintest
-          </a>
+            LOG IN
+          </button>
+          <!-- <a class="w-100 px-5 me-2 btn btn-lg btn-outline-success" role="button" href="/indexIn.html">
+          logintest
+        </a> -->
           <a
             class="w-100 px-5 ms-2 btn btn-lg btn-outline-danger"
             role="button"
             href="/register.html"
           >
-            Register
+            REGISTER
           </a>
         </div>
         <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
