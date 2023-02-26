@@ -1,9 +1,11 @@
-import { API_AUCTION_REGISTER_URL } from "../api/constants.mjs";
+import { register_URL } from "../api/constants.mjs";
+import * as displayMsg from "../ui/displayError.mjs";
 
-console.log(API_AUCTION_REGISTER_URL);
+console.log(register_URL);
 
 export async function register(url, data) {
   try {
+    const url = register_URL;
     const userReg = {
       headers: {
         "content-Type": "application/json; charset=UTF-8",
@@ -13,10 +15,18 @@ export async function register(url, data) {
     };
 
     const response = await fetch(url, userReg);
+
+    const result = await response.json();
     console.log(response);
 
-    alert("You are now registered");
-    window.location.replace("/login.html");
+    if (response.ok) {
+      displayMsg.displayRegisterSuccess();
+      window.location.replace("/login.html");
+      return result;
+
+    } else {
+      displayMsg.displayRegisterError();
+    }
 
   } catch (error) {
     console.log(error);

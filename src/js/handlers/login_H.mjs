@@ -1,5 +1,5 @@
 import { loginUser } from "../auth/login.mjs";
-import { displayError } from "../ui/displayError.mjs";
+import { displayLoginError } from "../ui/displayError.mjs";
 import { get } from "../storage/localstorage.mjs";
 
 export function loginFormListener() {
@@ -21,29 +21,17 @@ export function loginFormListener() {
         return response
 
       } else {
-        loginMsg.innerHTML = `
+        loginMsg.innerHTML = displayLoginError;
 
-        <div class="card bg-primary bg-opacity-75 border-danger banner-h1 text-center p-5 ms-3 mb-5">
-                                <div class="p-3">
-                                  <h5 class="fs-4 fw-bold text-danger">WRONG USERNAME AND/OR PASSWORD</h5>
-                                </div>
-                                <div class="p-1">
-                                  <img src="/assets/vectors/heartLogo_logout.png" height="60">
-                                </div>
-                                <div class="p-3">
-                                  <h5 class="fs-4 fw-bold text-white">ENTER VALID CREDENTIALS!</h5>
-                                </div>
-
-    `;
-    loginForm.reset();
+        loginForm.reset();
                                       
-                           setTimeout(() => {
-                              window.location = "/login.html";
-                              }, 3500);
+        setTimeout(() => {
+            window.location = "/login.html";
+            }, 3500);
                               
       }
     } catch (error) {
-      displayError(loginForm, error);
+      displayLoginError(loginForm, error);
     }
 
   });

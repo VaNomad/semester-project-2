@@ -9,7 +9,7 @@ regForm.addEventListener("submit", async (event) => {
   const formData = new FormData(regForm);
   const profile = Object.fromEntries(formData.entries());
 
-  console.log(regForm);
+  console.log(profile);
 
   if (regForm) {
     regMsg.innerHTML = `
@@ -35,3 +35,7 @@ regForm.addEventListener("submit", async (event) => {
 
   register(profile, regForm);
 });
+
+export function regFormListener() {
+  
+}

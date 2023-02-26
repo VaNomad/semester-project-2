@@ -1,9 +1,12 @@
-const host = 'https://nf-api.onrender.com';
-const base = '/api/v1/auction';
-export const API_AUCTION_URL = `${host}${base}`;
+const host = "https://nf-api.onrender.com";
+const base = "/api/v1/auction";
+export const baseUrl = `${host}${base}`;
+
+const listings = "/listings";
+export const listings_URL = `${baseUrl}${listings}`;
 
 const login = "/auth/login";
-export const API_AUCTION_LOGIN_URL = `${API_AUCTION_URL}${login}`;
+export const login_URL = `${baseUrl}${login}`;
 
 const register = "/auth/register";
-export const API_AUCTION_REGISTER_URL = `${API_AUCTION_URL}${register}`;
+export const register_URL = `${baseUrl}${register}`;
