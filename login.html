@@ -13,8 +13,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/src/js/auth/login.mjs" type="module" defer></script>
-    <script src="/src/js/handlers/login_H.mjs" type="module" defer></script>
+    <script src="/src/js/index.mjs" defer type="module"></script>
     <link rel="stylesheet" defer href="/dist/css/styles.css" />
     <title>Document</title>
   </head>
@@ -91,7 +90,7 @@
     <div
       class="d-flex justify-content-center align-items-center h-100 text-center"
     >
-      <form id="loginForm">
+      <form id="loginForm" method="post" action="/auth/register">
         <div>
           <img
             class="mb-4"

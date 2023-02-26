@@ -4,10 +4,11 @@ import {
 
 const listingItems = document.querySelector("#listingItems");
 
-const url = listings_URL;
+
 
 export async function listingCards() {
   try {
+    const url = listings_URL;
     const response = await fetch(url);
     console.log(response);
     if (!response.ok) {

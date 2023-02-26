@@ -1,9 +1,10 @@
 import { register } from "../auth/register.mjs";
 
-const regForm = document.querySelector("#regForm");
-const regMsg = document.querySelector("#regMsg");
+export function regFormListener() {
+  const regForm = document.querySelector("#regForm");
+  const regMsg = document.querySelector("#regMsg");
 
-regForm.addEventListener("submit", async (event) => {
+  regForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const regForm = event.target;
   const formData = new FormData(regForm);
@@ -34,8 +35,5 @@ regForm.addEventListener("submit", async (event) => {
   
 
   register(profile, regForm);
-});
-
-export function regFormListener() {
-  
+  });
 }
