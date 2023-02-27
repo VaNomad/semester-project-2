@@ -6,34 +6,37 @@ export function loginFormListener() {
   const loginForm = document.querySelector("#loginForm");
   const loginMsg = document.querySelector("#loginMsg");
 
-  loginForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const formData = new FormData(form);
-    const login = Object.fromEntries(formData.entries());
-
-    try {
-      const response = await loginUser(login);
+  if (loginForm) {
+    loginForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      console.log(data);
       
-      if (get.token) {
-        window.location.replace("/indexIn.html");
-    
-        return response
-
-      } else {
-        loginMsg.innerHTML = displayLoginError;
-
-        loginForm.reset();
-                                      
-        setTimeout(() => {
-            window.location = "/login.html";
-            }, 3500);
-                              
+  
+      try {
+        // const response = await loginUser(data);
+        await loginUser(data)
+        
+        if (get.token) {
+          window.location.replace("/indexIn.html");
+  
+        } else {
+          loginMsg.innerHTML = displayLoginError;
+  
+          loginForm.reset();
+                                        
+          setTimeout(() => {
+              window.location = "/login.html";
+              }, 3500);
+                                
+        }
+      } catch (error) {
+        displayLoginError(loginForm, error);
       }
-    } catch (error) {
-      displayLoginError(loginForm, error);
-    }
-
-  });
+  
+    });
+  }
 }
 loginFormListener();

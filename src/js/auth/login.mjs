@@ -21,16 +21,19 @@ export async function loginUser(data) {
     };
 
     const response = await fetch(url, userLogin);
+    console.log(response);
+    
+    
 
-    const { accessToken, ...profile } = await response.json();
+    if (response.ok) {
 
-    if (accessToken > 0) {
+      const { accessToken, ...profile } = await response.json();
       window.location.replace("/indexIn.html");
 
       storage.save("token", accessToken);
       console.log(accessToken);
 
-      storage.set("profile", profile);
+      storage.save("profile", profile);
 
       return response;
 

@@ -3,15 +3,15 @@ import * as displayMsg from "../ui/displayError.mjs";
 
 console.log(register_URL);
 
-export async function register(url, data) {
+export async function register(profile) {
   try {
     const url = register_URL;
     const userReg = {
+      method: "post",
       headers: {
         "content-Type": "application/json; charset=UTF-8",
       },
-      method: "post",
-      body: JSON.stringify(data),
+      body: JSON.stringify(profile),
     };
 
     const response = await fetch(url, userReg);
@@ -32,5 +32,9 @@ export async function register(url, data) {
     console.log(error);
   }
 }
+
+
+
+
 
 

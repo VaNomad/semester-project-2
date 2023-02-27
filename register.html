@@ -89,8 +89,8 @@
     </header>
 
     <div class="d-flex justify-content-center align-content-center text-center">
-      <form class="regForm" id="regForm" method="post" action="/auth/register">
-        <div class="regMsg" id="regMsg">
+      <form id="regForm" method="post" action="/auth/register">
+        <div id="regMsg">
           <img
             class="mb-4"
             src="/assets/vectors/heartLogo_purple.png"
@@ -105,10 +105,10 @@
             <div class="col inner-form rounded mx-auto">
               <div class="form-floating mb-3">
                 <input
-                  type="name"
+                  type="text"
                   name="name"
                   class="form-control"
-                  id="floatingInput"
+                  id="floatingInput nameInput"
                   placeholder="Name"
                 />
                 <label for="floatingInput">Username</label>
@@ -118,8 +118,9 @@
                   type="email"
                   name="email"
                   class="form-control"
-                  id="floatingInput"
+                  id="floatingInput emailInput"
                   placeholder="name@example.com"
+                  pattern="[\w\-.]+@(stud.)?noroff.no$"
                 />
                 <label for="floatingInput">Email address</label>
               </div>
@@ -128,7 +129,7 @@
                   type="password"
                   name="password"
                   class="form-control"
-                  id="floatingPassword"
+                  id="floatingPassword passwordInput"
                   placeholder="Password"
                 />
                 <label for="floatingPassword">Password</label>
@@ -140,8 +141,8 @@
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon3">Avatar</span>
                   <input
-                    type="text"
-                    name="url"
+                    type="url"
+                    name="avatar"
                     class="form-control"
                     id="basic-url"
                     placeholder="https://URL-example.com/image"
@@ -171,11 +172,7 @@
               </div>
             </div>
             <div class="col my-auto">
-              <img
-                class="img-fluid rounded-circle avatar-img"
-                src="/assets/images/woman-gaa9f04541_640.jpg"
-                alt=""
-              />
+              <img class="img-fluid rounded-circle avatar-img" src="" alt="" />
             </div>
           </div>
         </div>
