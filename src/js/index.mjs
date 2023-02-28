@@ -25,6 +25,7 @@ function router() {
     
     case "/indexIn.html":
       handlers.logOutUser();
+      pages.listingCardsIn();
       return;
   }
   
