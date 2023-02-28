@@ -14,13 +14,12 @@ function router() {
       return;
     
     case "/register.html":
-      // auth.register();
       handlers.regFormListener();
       return;
     
     case "/login.html":
-      // auth.loginUser();
       handlers.loginFormListener();
+      handlers.registerSuccess();
       return;
     
     case "/indexIn.html":
