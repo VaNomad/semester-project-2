@@ -49,13 +49,13 @@ export async function listingCardsIn() {
             </div>
             <p class="text-dark ms-1 fs-5">${listing._count.bids}</p>
           </div>
-          <div class="card-body bg-primary">
+          <div class="card-body bg-primary m-3">
             <h5 class="card-title text-white">${listing.title}</h5>
             <p class="card-text text-white-50">
             ${listing.description}
             </p>
           </div>
-          <div class="card-footer bg-primary border-0">
+          <div class="card-footer bg-primary border-0 m-3">
             <div><small class="text-danger"> AUCTION ENDS: ${new Date(listing.endsAt).toLocaleDateString()} @ ${new Date(listing.endsAt).toLocaleTimeString()}</small></div>
             <div><small class="text-muted"> LAST UPDATED: ${new Date(listing.updated).toLocaleDateString()}</small></div>
           </div>
