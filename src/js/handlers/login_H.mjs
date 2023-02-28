@@ -1,11 +1,11 @@
 import { loginUser } from "../auth/login.mjs";
 import { displayLoginError } from "../ui/displayError.mjs";
-import { displayLoginSuccess } from "../ui/displayError.mjs";
+// import { displayLoginSuccess } from "../ui/displayError.mjs";
 // import { get } from "../storage/localstorage.mjs";
 
 export function loginFormListener() {
   const loginForm = document.querySelector("#loginForm");
-  const loginMsg = document.querySelector("#loginMsg");
+  // const loginMsg = document.querySelector("#loginMsg");
   const loginError = document.querySelector("#loginError");
 
   if (loginForm) {
@@ -19,11 +19,10 @@ export function loginFormListener() {
   
       try {
         const response = await loginUser(data);
-        // await loginUser(data)
-        
+        // window.location.href = url;
         if (response.ok) {
-          window.location.replace("/indexIn.html");
-          loginMsg.innerHTML = displayLoginSuccess;
+          window.location.replace("/indexIn.html?_loginSuccess=true");
+          
         } else {
           loginError.innerHTML = displayLoginError;
   

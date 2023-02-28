@@ -1,5 +1,5 @@
 
-import { remove } from "../storage/localstorage.mjs";
+import { clear, remove } from "../storage/localstorage.mjs";
 // import { clear } from "../storage/localstorage.mjs";
 
 
@@ -15,6 +15,7 @@ export function logOutUser() {
     logoutBtn.addEventListener("click", async () => {
       remove("profile");
       remove("token");
+      clear();
       
       setTimeout(() => {
         window.location.replace("/index.html");

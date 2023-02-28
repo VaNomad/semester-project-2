@@ -36,7 +36,9 @@ export function displayLoginSuccess(parent) {
                        </div>
     
                       `;
-            
+  setTimeout(() => {
+    div.innerHTML = "";
+  }, 2000)
 }
 export function displayRegisterError(parent) {
   const div = document.createElement("div");
