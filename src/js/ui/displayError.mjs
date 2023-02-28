@@ -1,9 +1,7 @@
 
-export function displayLoginError(parent) {
-  const div = document.createElement("div");
-  div.classList.add("error");
-  parent.prepend(div);
-  div.innerHTML = `
+export function displayLoginError() {
+  const msg = document.createElement("div");
+  msg.innerHTML = `
 
             <div class="card bg-primary bg-opacity-75 border-danger banner-h1 text-center p-5 ms-3 mb-5">
                        <div class="p-3">
@@ -17,6 +15,7 @@ export function displayLoginError(parent) {
                        </div>
     
                       `;
+  return msg;
             
 }
 export function displayLoginSuccess() {
@@ -35,13 +34,12 @@ export function displayLoginSuccess() {
                        </div>
     
                       `;
+  return msg;
 
 }
-export function displayRegisterError(parent) {
-  const div = document.createElement("div");
-  div.classList.add("error");
-  parent.prepend(div);
-  div.innerHTML = `
+export function displayRegisterError() {
+  const msg = document.createElement("div");
+  msg.innerHTML = `
 
             <div class="card bg-primary bg-opacity-75 border-danger banner-h1 text-center p-5 ms-3 mb-5">
                        <div class="p-3">
@@ -55,13 +53,16 @@ export function displayRegisterError(parent) {
                        </div>
     
                       `;
+  return msg;
             
 }
-export function displayRegisterSuccess(parent) {
-  const div = document.createElement("div");
-  div.classList.add("error");
-  parent.prepend(div);
-  div.innerHTML = `
+export function displayRegisterSuccess() {
+  // const div = document.createElement("div");
+  // div.classList.add("error");
+  // parent.prepend(div);
+  // div.innerHTML = 
+  const msg = document.createElement("div");
+  msg.innerHTML = `
 
             <div class="card bg-primary bg-opacity-75 border-success banner-h1 text-center p-5 ms-3 mb-5">
                        <div class="p-3">
@@ -75,5 +76,6 @@ export function displayRegisterSuccess(parent) {
                        </div>
     
                       `;
+  return msg;
             
 }
