@@ -87,8 +87,9 @@ listingCardsIn();
 
 export function loginSuccess() {
   if (window.location.href.indexOf('?_loginSuccess=true')) {
+    loginMsg.innerHTML = displayLoginSuccess;
     setTimeout(() => {
-      loginMsg.innerHTML = displayLoginSuccess;
+      loginMsg.remove();
     }, 3000)
   }
 }

@@ -19,10 +19,9 @@ export function displayLoginError(parent) {
                       `;
             
 }
-export function displayLoginSuccess(parent) {
-  const div = document.createElement("div");
-  parent.prepend(div);
-  div.innerHTML = `
+export function displayLoginSuccess() {
+  const msg = document.createElement("div");
+  msg.innerHTML = `
 
             <div class="card bg-primary bg-opacity-75 border-success banner-h1 text-center p-5 ms-3 mb-5">
                        <div class="p-3">
@@ -36,9 +35,7 @@ export function displayLoginSuccess(parent) {
                        </div>
     
                       `;
-  setTimeout(() => {
-    div.innerHTML = "";
-  }, 2000)
+
 }
 export function displayRegisterError(parent) {
   const div = document.createElement("div");
