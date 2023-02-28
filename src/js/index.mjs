@@ -1,4 +1,4 @@
-import * as auth from "./auth/index.mjs";
+// import * as auth from "./auth/index.mjs";
 import * as pages from "./pages/index.mjs";
 import * as handlers from "./handlers/index.mjs";
 
@@ -14,12 +14,12 @@ function router() {
       return;
     
     case "/register.html":
-      auth.register();
+      // auth.register();
       handlers.regFormListener();
       return;
     
     case "/login.html":
-      auth.loginUser();
+      // auth.loginUser();
       handlers.loginFormListener();
       return;
     

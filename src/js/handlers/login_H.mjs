@@ -1,6 +1,7 @@
 import { loginUser } from "../auth/login.mjs";
 import { displayLoginError } from "../ui/displayError.mjs";
-import { get } from "../storage/localstorage.mjs";
+import { displayLoginSuccess } from "../ui/displayError.mjs";
+// import { get } from "../storage/localstorage.mjs";
 
 export function loginFormListener() {
   const loginForm = document.querySelector("#loginForm");
@@ -16,12 +17,12 @@ export function loginFormListener() {
       
   
       try {
-        // const response = await loginUser(data);
-        await loginUser(data)
+        const response = await loginUser(data);
+        // await loginUser(data)
         
-        if (get.token) {
+        if (response.ok) {
           window.location.replace("/indexIn.html");
-  
+          loginMsg.innerHTML = displayLoginSuccess;
         } else {
           loginMsg.innerHTML = displayLoginError;
   
