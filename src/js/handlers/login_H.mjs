@@ -6,6 +6,7 @@ import { displayLoginSuccess } from "../ui/displayError.mjs";
 export function loginFormListener() {
   const loginForm = document.querySelector("#loginForm");
   const loginMsg = document.querySelector("#loginMsg");
+  const loginError = document.querySelector("#loginError");
 
   if (loginForm) {
     loginForm.addEventListener("submit", async (event) => {
@@ -24,7 +25,7 @@ export function loginFormListener() {
           window.location.replace("/indexIn.html");
           loginMsg.innerHTML = displayLoginSuccess;
         } else {
-          loginMsg.innerHTML = displayLoginError;
+          loginError.innerHTML = displayLoginError;
   
           loginForm.reset();
                                         
