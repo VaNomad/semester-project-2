@@ -22,6 +22,10 @@ function router() {
       auth.loginUser();
       handlers.loginFormListener();
       return;
+    
+    case "/indexIn.html":
+      handlers.logOutUser();
+      return;
   }
   
 }
