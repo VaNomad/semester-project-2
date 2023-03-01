@@ -1,41 +1,42 @@
-import { singleListing_URL } from "../api/constants.mjs";
+import { listings_URL } from "../api/constants.mjs";
 import { displayListingSuccess } from "../ui/displayError.mjs";
 import { get } from "../storage/localstorage.mjs";
 
+const token = get("token");
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get("id");
+
+const url = `${listings_URL}/${id}`;
 const listingPreview = document.querySelector("#listingPreview");
 const listingMsg = document.querySelector("#listingMsg");
 
 
-export async function specificPreview(id) {
-  const url = singleListing_URL;
+
+export async function specificPreview() {
+  const data = {
+    headers: {
+      "content-Type": "application/json; charset=UTF-8",
+      Authorization: `Bearer ${token}`,
+    },
+    method: "get",
+  };
+
+  
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, data);
     console.log(response);
     
     const results = await response.json();
     console.log(results);
 
     listingPreview.innerHTML = "";
-    results.forEach((listing) => {
+    results((listing) => {
 
-
-      // ——————————————————————————————————————————————————————————highest bid sorting
-      // const sortedListings = listing.sort((a, b) => {
-      //   return b.bids.amount - a.bids.amount
-      // });
-
-      // const sortedListings = sortedListings.map((sortedListing) => {
-      //   sortedListing.bids.sort((a, b) => {
-      //     return a.amount - b.amount;
-      //   });
-      //   console.log(sortedListing);
-      // });
-      // ———————————————————————————————————————————————————————————————————————————————
-
-      if (id) {
+      if (results.Authorization) {
         listingPreview.innerHTML = `
             
-      <div class="container-lg text-center text-white">
+    <div class="container-lg text-center text-white">
       <div class="row bg-secondary rounded mb-3">
         <div class="col-lg">
           <div class="d-flex justify-content-center pt-5">
