@@ -28,6 +28,9 @@ function router() {
       pages.listingCardsIn();
       pages.loginSuccess();
       return;
+    
+    case "/specific.html":
+      pages.specificPreview();
   }
   
 }

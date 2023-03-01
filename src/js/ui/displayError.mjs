@@ -60,10 +60,6 @@ export function displayRegisterError() {
 }
 
 export function displayRegisterSuccess() {
-  // const div = document.createElement("div");
-  // div.classList.add("error");
-  // parent.prepend(div);
-  // div.innerHTML = 
   const msg = document.createElement("div");
   msg.innerHTML = `
 
@@ -83,10 +79,6 @@ export function displayRegisterSuccess() {
             
 }
 export function displayLogoutSuccess() {
-  // const div = document.createElement("div");
-  // div.classList.add("error");
-  // parent.prepend(div);
-  // div.innerHTML = 
   const msg = document.createElement("div");
   msg.innerHTML = `
 
@@ -99,6 +91,25 @@ export function displayLogoutSuccess() {
                        </div>
                        <div class="p-3">
                          <h5 class="fs-4 fw-bold text-white">THANK YOU FOR YOUR VISIT!</h5>
+                       </div>
+    
+                      `;
+  return msg;
+            
+}
+export function displayListingSuccess() {
+  const msg = document.createElement("div");
+  msg.innerHTML = `
+
+            <div class="card bg-primary bg-opacity-75 border-success banner-h1 text-center p-5 ms-3 mb-5">
+                       <div class="p-3">
+                         <h5 class="fs-4 fw-bold text-success">YOUR LISTING WAS CREATED!</h5>
+                       </div>
+                       <div class="p-1">
+                         <img src="/assets/vectors/heartLogo_green.png" height="60">
+                       </div>
+                       <div class="p-3">
+                         <h5 class="fs-4 fw-bold text-white">YOU CAN NOW FIND IT IN LISTINGS!</h5>
                        </div>
     
                       `;
