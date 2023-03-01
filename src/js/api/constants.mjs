@@ -11,5 +11,4 @@ export const login_URL = `${baseUrl}${login}`;
 const register = "/auth/register";
 export const register_URL = `${baseUrl}${register}`;
 
-const singleListing = "/listings/${id}";
-export const singleListing_URL = `${baseUrl}${singleListing}`;
+
