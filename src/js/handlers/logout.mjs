@@ -18,7 +18,7 @@ export function logOutUser() {
       clear();
       
       setTimeout(() => {
-        window.location.replace("/index.html");
+        window.location.replace("/index.html?_logoutSuccess=true");
       }, 1000);
       
       

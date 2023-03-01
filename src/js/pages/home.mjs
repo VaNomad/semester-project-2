@@ -1,7 +1,7 @@
-import {
-  listings_URL
-} from "../api/constants.mjs";
+import { listings_URL } from "../api/constants.mjs";
+import { displayLogoutSuccess } from "../ui/displayError.mjs";
 
+const logoutMsg = document.querySelector("#logoutMsg");
 const listingItems = document.querySelector("#listingItems");
 
 
@@ -71,3 +71,13 @@ export async function listingCards() {
 }
 listingCards();
 
+export function logoutSuccess() {
+  if (window.location.href.includes("?_logoutSuccess=true")) {
+    const msg = displayLogoutSuccess();
+    logoutMsg.append(msg);
+    setTimeout(() => {
+      logoutMsg.remove();
+    }, 3000)
+
+  } 
+}

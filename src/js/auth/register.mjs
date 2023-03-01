@@ -1,5 +1,5 @@
 import { register_URL } from "../api/constants.mjs";
-import * as displayMsg from "../ui/displayError.mjs";
+// import * as displayMsg from "../ui/displayError.mjs";
 
 console.log(register_URL);
 
@@ -20,12 +20,9 @@ export async function register(profile) {
     console.log(response);
 
     if (response.ok) {
-      displayMsg.displayRegisterSuccess();
-      window.location.replace("/login.html");
+      // displayMsg.displayRegisterSuccess();
+      window.location.replace("/login.html?_registerSuccess=true");
       return result;
-
-    } else {
-      displayMsg.displayRegisterError();
     }
 
   } catch (error) {

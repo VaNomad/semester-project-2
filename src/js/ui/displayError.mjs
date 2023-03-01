@@ -18,6 +18,7 @@ export function displayLoginError() {
   return msg;
             
 }
+
 export function displayLoginSuccess() {
   const msg = document.createElement("div");
   msg.innerHTML = `
@@ -37,6 +38,7 @@ export function displayLoginSuccess() {
   return msg;
 
 }
+
 export function displayRegisterError() {
   const msg = document.createElement("div");
   msg.innerHTML = `
@@ -56,6 +58,7 @@ export function displayRegisterError() {
   return msg;
             
 }
+
 export function displayRegisterSuccess() {
   // const div = document.createElement("div");
   // div.classList.add("error");
@@ -72,7 +75,30 @@ export function displayRegisterSuccess() {
                          <img src="/assets/vectors/heartLogo_green.png" height="60">
                        </div>
                        <div class="p-3">
-                         <h5 class="fs-4 fw-bold text-white">YOU ARE AUTHORIZED TO START BIDDING!</h5>
+                         <h5 class="fs-4 fw-bold text-white">YOU CAN NOW LOG IN!</h5>
+                       </div>
+    
+                      `;
+  return msg;
+            
+}
+export function displayLogoutSuccess() {
+  // const div = document.createElement("div");
+  // div.classList.add("error");
+  // parent.prepend(div);
+  // div.innerHTML = 
+  const msg = document.createElement("div");
+  msg.innerHTML = `
+
+            <div class="card bg-primary bg-opacity-75 border-success banner-h1 text-center p-5 ms-3 mb-5">
+                       <div class="p-3">
+                         <h5 class="fs-4 fw-bold text-success">YOU HAVE SUCCESSFULLY LOGGED OUT!</h5>
+                       </div>
+                       <div class="p-1">
+                         <img src="/assets/vectors/heartLogo_green.png" height="60">
+                       </div>
+                       <div class="p-3">
+                         <h5 class="fs-4 fw-bold text-white">THANK YOU FOR YOUR VISIT!</h5>
                        </div>
     
                       `;

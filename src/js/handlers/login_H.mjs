@@ -1,9 +1,9 @@
 import { loginUser } from "../auth/login.mjs";
-import { displayLoginError, displayRegisterSuccess } from "../ui/displayError.mjs";
+import { displayLoginError, displayRegisterSuccess} from "../ui/displayError.mjs";
 // import { displayLoginSuccess } from "../ui/displayError.mjs";
 // import { get } from "../storage/localstorage.mjs";
+const registerMsg = document.querySelector("#regSuccess");
 
-const registerMsg = document.querySelector("#registerSuccess");
 
 export function loginFormListener() {
   const loginForm = document.querySelector("#loginForm");
@@ -44,11 +44,12 @@ export function loginFormListener() {
 }
 
 export function registerSuccess() {
-  if (window.location.href.indexOf("?_registerSuccess=true")) {
+  if (window.location.href.includes("?_registerSuccess=true")) {
     const msg = displayRegisterSuccess();
     registerMsg.append(msg);
     setTimeout(() => {
       registerMsg.remove();
     }, 3000)
-  }
+
+  } 
 }

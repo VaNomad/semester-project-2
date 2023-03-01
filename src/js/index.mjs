@@ -1,4 +1,4 @@
-// import * as auth from "./auth/index.mjs";
+
 import * as pages from "./pages/index.mjs";
 import * as handlers from "./handlers/index.mjs";
 
@@ -11,6 +11,7 @@ function router() {
   switch (path) {
     case "/index.html":
       pages.listingCards();
+      pages.logoutSuccess();
       return;
     
     case "/register.html":
@@ -21,7 +22,7 @@ function router() {
       handlers.loginFormListener();
       handlers.registerSuccess();
       return;
-    
+      
     case "/indexIn.html":
       handlers.logOutUser();
       pages.listingCardsIn();
