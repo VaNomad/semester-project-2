@@ -8,8 +8,9 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
 const url = `${listings_URL}/${id}`;
-const listingPreview = document.querySelector("#listingPreview");
-const listingMsg = document.querySelector("#listingMsg");
+
+const listingPreview = document.querySelector("#ObjectPreview");
+const ObjectMsg = document.querySelector("#ObjectMsg");
 
 
 
@@ -22,46 +23,41 @@ export async function specificPreview() {
     method: "get",
   };
 
+  const response = await fetch(url, data);
+  console.log(response);
+    
+  const results = await response.json();
+  console.log(results);
   
-  try {
-    const response = await fetch(url, data);
-    console.log(response);
-    
-    const results = await response.json();
-    console.log(results);
 
-    listingPreview.innerHTML = "";
-    
-    results((listing) => {
 
-      
-      listingPreview.innerHTML = `
+  listingPreview.innerHTML = `
             
       <div class="container-lg text-center text-white">
         <div class="row bg-secondary rounded mb-3">
           <div class="col-lg">
             <div class="d-flex justify-content-center pt-5">
               <div class="big-img d-flex justify-content-center align-items-center">
-                <img class="big-img" src="${listing.media[0]
-        }" alt="Picture of listing" />
+                <img class="big-img" src="${Object.media[0]
+    }" alt="Picture of Object" />
               </div>
             </div>
             <div class="d-flex justify-content-evenly pt-4">
               <div class="d-flex justify-content-center align-items-center ms-5">
-                <img class="small-img" src="${listing.media[1]
-        }" alt="Picture of listing" />
+                <img class="small-img" src="${Object.media[1]
+    }" alt="Picture of Object" />
               </div>
               <div class="d-flex justify-content-center align-items-center">
-                <img class="small-img" src="${listing.media[2]
-        }" alt="Picture of listing" />
+                <img class="small-img" src="${Object.media[2]
+    }" alt="Picture of Object" />
               </div>
               <div class="d-flex justify-content-center align-items-center">
-                <img class="small-img" src="${listing.media[3]
-        }" alt="Picture of listing" />
+                <img class="small-img" src="${Object.media[3]
+    }" alt="Picture of Object" />
               </div>
               <div class="d-flex justify-content-center align-items-center me-5">
-                <img class="small-img" src="${listing.media[4]
-        }" alt="Picture of listing" />
+                <img class="small-img" src="${Object.media[4]
+    }" alt="Picture of Object" />
               </div>
             </div>
           </div>
@@ -70,19 +66,11 @@ export async function specificPreview() {
               <div class="p-5">
                 <div>
                   <h2 class="body-h2 text-start fs-5 px-2">
-                  ${listing.title}
+                  ${Object.title}
                   </h2>
                 </div>
                 <div class="div p-2">
-                  <p class="text-start">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Eum temporibus similique odio officiis dolorem esse modi
-                    asperiores explicabo distinctio dolore nobis suscipit fugiat
-                    assumenda nisi, optio quidem quos, sit quod architecto
-                    perferendis. Consequatur ipsam, modi nulla deleniti fuga
-                    architecto, culpa maxime, iste iusto soluta animi? Qui, enim
-                    omnis. Unde, enim.
-                  </p>
+                  ${Object.description}
                 </div>
                 <div class="bid-amount p-2">
                   <h2 class="body-h2 fs-5 text-start">BID AMOUNT</h2>
@@ -99,11 +87,11 @@ export async function specificPreview() {
                 </div>
                 <div class="expiration d-flex justify-content-between px-2">
                   <p class="text-danger">EXPIRES</p>
-                  <p class="text-danger">22/02 | 20:00</p>
+                  ${Object.endsAt}
                 </div>
                 <div class="expiration d-flex justify-content-between align-items-center px-2">
                   <p>CURRENT BID</p>
-                  <h3>655</h3>
+                  ${Object._amount}
                 </div>
                 <div class="p-2">
                   <button class="w-100 px-5 py-2 btn btn-lg btn-outline-success banner-h1 fs-2" type="submit">
@@ -145,20 +133,63 @@ export async function specificPreview() {
           
           
         `;
-    });
-    
-  } catch (error) {
-    console.log(error);
-    return "error", `Could not get the listing from the server`;
-  }
 }
 
-export function listingSuccess() {
-  if (window.location.href.indexOf('?_listingSuccess=true')) {
+
+export function ObjectSuccess() {
+  if (window.location.href.indexOf('?_ObjectSuccess=true')) {
     const msg = displayListingSuccess();
-    listingMsg.append(msg);
+    ObjectMsg.append(msg);
     setTimeout(() => {
-      listingMsg.remove();
+      ObjectMsg.remove();
     }, 3000)
   }
 }
+
+// import { Objects_URL } from "../api/constants.mjs";
+// import { displayObjectSuccess } from "../ui/displayError.mjs";
+// import { get } from "../storage/localstorage.mjs";
+
+// const token = get("token");
+// const queryString = document.location.search;
+// const params = new URLSearchParams(queryString);
+// const id = params.get("id");
+
+// const url = `${Objects_URL}/${id}`;
+// const ObjectPreview = document.querySelector("#ObjectPreview");
+// const ObjectMsg = document.querySelector("#ObjectMsg");
+
+// export async function specificPreview() {
+//   const data = {
+//     headers: {
+//       "content-Type": "application/json; charset=UTF-8",
+//       Authorization: `Bearer ${token}`,
+//     },
+//     method: "get",
+//   };
+
+//   const response = await fetch(url, data);
+//   console.log(response);
+    
+//   const results = await response.json();
+//   console.log(results);
+
+//   ObjectPreview.innerHTML = `<div>hello this is random text</div>`
+// }
+
+
+
+
+
+//   try {
+    
+
+    
+    
+    
+    
+//   } catch (error) {
+//     console.log(error);
+//     return "error", `Could not get the Object from the server`;
+//   }
+// }
