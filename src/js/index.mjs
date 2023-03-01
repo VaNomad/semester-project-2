@@ -1,6 +1,7 @@
 
 import * as pages from "./pages/index.mjs";
 import * as handlers from "./handlers/index.mjs";
+import * as search from "./user/index.mjs";
 
 
 
@@ -12,6 +13,8 @@ function router() {
     case "/index.html":
       pages.listingCards();
       pages.logoutSuccess();
+      search.searchFormListener();
+      search.searchCall();
       return;
     
     case "/register.html":
@@ -27,6 +30,8 @@ function router() {
       handlers.logOutUser();
       pages.listingCardsIn();
       pages.loginSuccess();
+      search.searchFormListener();
+      search.searchCall();
       return;
     
     case "/specific.html":

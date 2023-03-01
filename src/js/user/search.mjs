@@ -1,7 +1,7 @@
-import { API_AUCTION_URL } from "../api/constants.mjs";
+import { baseUrl } from "../api/constants.mjs";
 
 const action = "/listings?_tag";
-const searchURL = (API_AUCTION_URL + action);
+const searchURL = `${baseUrl}${action}`;
 
 const noResults = document.querySelector("#noResults");
 const searchItems = document.querySelector("#listingItems");
@@ -9,7 +9,7 @@ const searchForm = document.querySelector("#searchForm");
 const searchValue = document.querySelector("#searchValue");
 const token = localStorage.getItem("Token");
 
-async function searchCall() {
+export async function searchCall() {
   try {
     const data = {
       headers: {
@@ -76,13 +76,17 @@ async function searchCall() {
   }
 }
 
-searchForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const searchForm = e.target;
-  console.log(searchForm);
-  searchCall();
-  searchForm.reset();
-});
+export async function searchFormListener() {
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const searchForm = e.target;
+    console.log(searchForm);
+    searchCall();
+    searchForm.reset();
+  });
+}
+
+
 
 
 
