@@ -30,10 +30,7 @@ export function regFormListener() {
         // window.location.href = url;
         if (response.ok) {
           window.location.replace("/login.html");
-    
-        } else {
-          regError.innerHTML = displayRegisterError;
-  
+
           regForm.reset();
                                         
           setTimeout(() => {
@@ -42,7 +39,7 @@ export function regFormListener() {
                                 
         }
       } catch (error) {
-        displayRegisterError(regForm, error);
+        displayRegisterError(regForm, error, regError);
       }
       
   
