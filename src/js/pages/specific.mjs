@@ -148,7 +148,7 @@
 // }
 
 import { listings_URL } from "../api/constants.mjs";
-import { displayListingSuccess } from "../ui/displayError.mjs";
+import { displayListingSuccess, displayListingError } from "../ui/displayError.mjs";
 import { get } from "../storage/localstorage.mjs";
 
 const token = get("token");
@@ -175,6 +175,14 @@ export async function specificPreview() {
   const results = await response.json();
   console.log(results);
 
+  if (!response.ok) {
+    const msg = displayListingError();
+      listingMsg.append(msg);
+      setTimeout(() => {
+        listingMsg.remove();
+        history.go(-1);
+      }, 2200);
+  }
   listingPreview.innerHTML = `
             
          <div class="container-lg text-center text-white">

@@ -1,9 +1,5 @@
-import {
-  listings_URL
-} from "../api/constants.mjs";
-import {
-  displayLoginSuccess
-} from "../ui/displayError.mjs";
+import { listings_URL } from "../api/constants.mjs";
+import { displayLoginSuccess } from "../ui/displayError.mjs";
 
 const listingItems = document.querySelector("#listingItemsIn");
 const loginMsg = document.querySelector("#loginMsg");
@@ -80,12 +76,12 @@ export async function listingCardsIn() {
 listingCardsIn();
 
 export function loginSuccess() {
-  if (window.location.href.indexOf('?_loginSuccess=true')) {
+  if (window.location.href.includes('/indexIn.html?_loginSuccess=true')) {
     const msg = displayLoginSuccess();
     loginMsg.append(msg);
     setTimeout(() => {
       loginMsg.remove();
-    }, 3000)
+    }, 2200)
   }
 }
 

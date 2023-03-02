@@ -5,7 +5,6 @@ const logoutMsg = document.querySelector("#logoutMsg");
 const listingItems = document.querySelector("#listingItems");
 
 
-
 export async function listingCards() {
   try {
     const url = listings_URL;
@@ -77,7 +76,7 @@ export function logoutSuccess() {
     logoutMsg.append(msg);
     setTimeout(() => {
       logoutMsg.remove();
-    }, 3000)
+    }, 2200)
 
   } 
 }

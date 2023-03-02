@@ -29,7 +29,7 @@ export async function searchCall() {
       setTimeout(() => {
         noResults.remove();
         location.reload();
-      }, 3000);
+      }, 2200);
     }
     
     searchItems.innerHTML = "";
