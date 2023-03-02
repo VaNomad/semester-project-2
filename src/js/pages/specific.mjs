@@ -189,13 +189,13 @@ export async function specificPreview() {
            <div class="row bg-secondary rounded mb-3">
              <div class="col-lg">
                <div class="d-flex justify-content-center pt-5">
-                 <div class="big-img d-flex justify-content-center align-items-center">
-                  <img class="big-img" src="" alt="Picture of Object" />
+                 <div class="big-img d-flex justify-content-center align-items-center bg-transparent">
+                 ${results.media[0]}
                 </div>
               </div>
               <div class="d-flex justify-content-evenly pt-4">
                 <div class="d-flex justify-content-center align-items-center ms-5">
-                  <img class="small-img" src="" alt="Picture of Object" />
+                  ${results.media[1]}
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                   <img class="small-img" src="" alt="Picture of Object" />
@@ -213,11 +213,11 @@ export async function specificPreview() {
                 <div class="p-5">
                   <div>
                     <h2 class="body-h2 text-start fs-5 px-2">
-                    ${Object.title}
+                    ${results.title}
                     </h2>
                   </div>
-                  <div class="div p-2">
-                    ${Object.description}
+                  <div class="text-start p-2">
+                    ${results.description}
                   </div>
                   <div class="bid-amount p-2">
                     <h2 class="body-h2 fs-5 text-start">BID AMOUNT</h2>
@@ -234,11 +234,11 @@ export async function specificPreview() {
                   </div>
                   <div class="expiration d-flex justify-content-between px-2">
                     <p class="text-danger">EXPIRES</p>
-                    ${Object.endsAt}
+                    ${results.endsAt}
                   </div>
                   <div class="expiration d-flex justify-content-between align-items-center px-2">
                     <p>CURRENT BID</p>
-                    ${Object.title}
+                    ${results.title}
                   </div>
                   <div class="p-2">
                     <button class="w-100 px-5 py-2 btn btn-lg btn-outline-success banner-h1 fs-2" type="submit">
