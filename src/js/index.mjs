@@ -35,7 +35,7 @@ function router() {
     
     case "/specific.html":
       pages.specificPreview()
-      pages.logOutUser();
+      handlers.logOutUser();
       return;
   }
   
