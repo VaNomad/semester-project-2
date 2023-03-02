@@ -14,7 +14,7 @@ export async function bidListener() {
 
   if(!token) {
   bidButton.disabled = true;
-  bidMsg.innerHTML = messages.bidMessage;
+  bidMsg.innerHTML = messages.bidError;
   console.log("NO TOKEN!")
   } else {
     bidMsg.innerHTML = "";
