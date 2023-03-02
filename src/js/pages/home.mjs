@@ -76,6 +76,7 @@ export function logoutSuccess() {
     logoutMsg.append(msg);
     setTimeout(() => {
       logoutMsg.remove();
+      location.replace("/index.html")
     }, 2200)
 
   } 

@@ -148,7 +148,7 @@
 // }
 
 import { listings_URL } from "../api/constants.mjs";
-import { displayListingSuccess, displayListingError } from "../ui/displayError.mjs";
+import { displayListingError } from "../ui/displayError.mjs";
 import { get } from "../storage/localstorage.mjs";
 
 const token = get("token");
@@ -204,7 +204,7 @@ export async function specificPreview() {
                   <img class="small-img" src="" alt="Picture of Object" />
                 </div>
                 <div class="d-flex justify-content-center align-items-center me-5">
-                  <img class="img-fluid" width="30" height="30" src="${Object.media[0]}" alt="Picture of Object" />
+                  <img class="img-fluid" width="30" height="30" src="" alt="Picture of Object" />
                 </div>
               </div>
             </div>

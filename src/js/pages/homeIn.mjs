@@ -37,6 +37,7 @@ export async function listingCardsIn() {
 
       listingItems.innerHTML += `
             
+      
       <div class="col-lg-4 col-md-6 col-xs-12 text-white-50 p-0">
         <div class="card border-0 bg-secondary bg-opacity-75 m-3 p-3">
           <a href="/specific.html?id=${listing.id}">
@@ -81,6 +82,7 @@ export function loginSuccess() {
     loginMsg.append(msg);
     setTimeout(() => {
       loginMsg.remove();
+      location.replace("/indexIn.html");
     }, 2200)
   }
 }
