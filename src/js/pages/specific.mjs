@@ -221,7 +221,7 @@ export async function specificPreview() {
                   </div>
                   <div class="bid-amount p-2">
                     <h2 class="body-h2 fs-5 text-start">BID AMOUNT</h2>
-                    <form class="form">
+                    <form class="form" id="bidForm">
                       <div class="input-group">
                         <span class="input-group-text bg-secondary"><img src="/assets/vectors/heartLogo_green.png"
                             height="30" alt="" /></span>
