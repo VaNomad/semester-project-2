@@ -14,7 +14,6 @@ function router() {
       pages.listingCards();
       pages.logoutSuccess();
       search.searchFormListener();
-      
       return;
     
     case "/register.html":
@@ -32,11 +31,11 @@ function router() {
       pages.listingCardsIn();
       pages.loginSuccess();
       search.searchFormListenerIn();
-      
       return;
     
     case "/specific.html":
       pages.specificPreview()
+      pages.logOutUser();
       return;
   }
   

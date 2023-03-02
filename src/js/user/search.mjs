@@ -28,7 +28,7 @@ export async function searchCall() {
       noResults.append(msg);
       setTimeout(() => {
         noResults.remove();
-        location.reload();
+        // location.reload();
       }, 2200);
     }
     
