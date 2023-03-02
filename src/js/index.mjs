@@ -19,6 +19,7 @@ function router() {
     
     case "/register.html":
       handlers.regFormListener();
+      handlers.setAvatar();
       return;
     
     case "/login.html":
@@ -35,7 +36,8 @@ function router() {
       return;
     
     case "/specific.html":
-      pages.specificPreview();
+      pages.specificPreview()
+      return;
   }
   
 }

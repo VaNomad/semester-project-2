@@ -1,4 +1,5 @@
 import { baseUrl } from "../api/constants.mjs";
+import { searchError } from "../ui/displayError.mjs";
 
 const action = "/listings?_tag";
 const searchURL = `${baseUrl}${action}`;
@@ -23,20 +24,12 @@ export async function searchCall() {
     console.log(results);
 
     if (results < 1) {
-      noResults.innerHTML = `
-
-      <div class="card bg-primary bg-opacity-75 border-danger banner-h1 text-center p-5 ms-3 mb-5">
-                                <div class="p-3">
-                                  <h5 class="fs-4 fw-bold text-danger">NO ITEMS WERE FOUND!</h5>
-                                </div>
-                                <div class="p-1">
-                                  <img src="/assets/vectors/heartLogo_logout.png" height="60">
-                                </div>
-                                <div class="p-3">
-                                  <h5 class="fs-4 fw-bold text-warning">TRY A DIFFERENT SEARCH</h5>
-                                </div>
-
-      `;
+      const msg = searchError();
+      noResults.append(msg);
+      setTimeout(() => {
+        noResults.remove();
+        location.reload();
+      }, 3000);
     }
     
     searchItems.innerHTML = "";
