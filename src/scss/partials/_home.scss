@@ -21,3 +21,15 @@
   object-fit: contain;
   z-index: 0;
 }
+
+.about-image {
+  min-height: 800px;
+  background-image: url("/assets/images/pexels-elijah-o'donnell-3439214.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 25%;
+}
+
+.vh-custom {
+  height: 93vh;
+}

@@ -10802,6 +10802,18 @@ textarea.form-control-lg {
   z-index: 0;
 }
 
+.about-image {
+  min-height: 800px;
+  background-image: url("/assets/images/pexels-elijah-o'donnell-3439214.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 25%;
+}
+
+.vh-custom {
+  height: 93vh;
+}
+
 body {
   font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", "Kanit", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
 }
