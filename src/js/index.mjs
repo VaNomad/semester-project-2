@@ -36,9 +36,12 @@ function router() {
       return;
     
     case "/specific.html":
-      pages.specificPreview()
+      pages.specificPreview();
       handlers.logOutUser();
       return;
+    
+    case "/profile.html":
+      handlers.logOutUser();
   }
   
 }
