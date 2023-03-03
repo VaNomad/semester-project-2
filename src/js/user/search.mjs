@@ -46,7 +46,7 @@ export async function searchCall() {
             <div class="heart">
               <img src="/assets/vectors/heartLogo_green.png" width="30" alt="" />
             </div>
-            <p class="text-dark ms-1 fs-5">${search._count.bids}</p>
+            <p class="text-dark ms-1 fs-5">${search.bids}</p>
           </div>
           <div class="card-body bg-primary">
             <h5 class="card-title text-white">${search.title}</h5>
