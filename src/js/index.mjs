@@ -37,6 +37,7 @@ function router() {
     
     case "/specific.html":
       pages.specificPreview();
+      handlers.bidListener();
       handlers.logOutUser();
       return;
     

@@ -1,36 +1,41 @@
 import * as storage from "../storage/localstorage.mjs";
-import * as user from "../user/profile.mjs";
 import * as messages from "../ui/displayError.mjs";
-import * as api from "../api/index.mjs"
+import * as api from "../api/index.mjs";
+// import { addBid } from "../api/index.mjs";
+// import  {specificPreview} from "../handlers/index.mjs";
 
 const form = document.querySelector("#bidForm");
+console.log(form);
+const bidInput = document.querySelector("#bidInput");
 const bidButton = document.querySelector("#bidAmount");
 const bidMsg = document.querySelector("#bidMsg");
 
 export async function bidListener() {
   const token = storage.get("token");
-  const profile = user.get("profile");
-  const profileName = user.name;
+  // const profile = specificPreview.profile;
+  // const profileName = specificPreview.seller.name;
 
   if(!token) {
   bidButton.disabled = true;
   bidMsg.innerHTML = messages.bidError;
-  console.log("NO TOKEN!")
-  } else {
-    bidMsg.innerHTML = "";
-    console.log("TOKEN RECEIVED!")
+  } 
 
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const form = event.target;
-      const formData = new FormData(form);
-      const amount = formData.get("amount");
-      const bidAmount = Number(amount);  
-      try {
-        api.addBid(bidAmount);
-      } catch (error) {
-        console.log(error);
-      }
-    });
-  }
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const bidNow = event.target;
+    console.log(bidNow);
+    
+    const numberValue = bidNow.value;
+    console.log(numberValue);
+    
+    api.addBid(numberValue); 
+    try {
+      api.addBid(numberValue);
+      console.log(numberValue);
+      
+    } catch (error) {
+      console.log(error);
+    }
+  });
+    
 }

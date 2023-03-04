@@ -1,15 +1,20 @@
 import * as urls from "./constants.mjs"
 import { get } from "../storage/localstorage.mjs";
 
+const bidForm = document.querySelector(".form");
+console.log(bidForm);
+
+
+const bidInput = document.querySelector("#bidInput");
 const querryString = document.location.search;
 const params = new URLSearchParams(querryString);
 const id = params.get("id");
-const bids = "/bids";
 
-export async function addBid(amount) {
-  const bid_URL = `${urls.listings_URL}/${id}/${bids}`;
+
+export async function addBid() {
+  const bid_URL = `${urls.listings_URL}/${id}/bids`;
   const token = get("token");
-  let bidAmount = { amount: amount };
+  let bidAmount = { amount: Number(bidInput.value) };
 
   try {
     const response = await fetch(bid_URL, {
@@ -28,3 +33,14 @@ export async function addBid(amount) {
     console.log(error);
   }
 }
+
+// function bidNumberProducts() {
+//   bidForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     const bidNow = e.target;
+//     const numberValue = bidNow.value;
+//     addBid(numberValue);
+//   });
+// }
+
+// bidNumberProducts();
