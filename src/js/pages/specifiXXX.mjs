@@ -43,7 +43,7 @@ export async function specificXXX() {
     description.innerHTML = results.description;
     
     const numberOfBids = document.querySelector("#numberOfBids");
-    numberOfBids.innerHTML = results.bids;
+    numberOfBids.innerHTML = results.bids[0];
     
     const sellerName = document.querySelector("#sellerName");
     sellerName.innerHTML = results.name;
