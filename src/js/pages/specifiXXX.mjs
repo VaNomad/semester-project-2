@@ -9,6 +9,7 @@ const id = params.get("id");
 
 const url = `${listings_URL}/${id}/?_seller=true&_bids=true`;
 const listingMsg = document.querySelector("#listingMsg");
+const bidHistory = document.querySelector("#bidHistory");
 
 export async function specificXXX() {
   const data = {
@@ -21,10 +22,48 @@ export async function specificXXX() {
 
   try {
     const response = await fetch(url, data);
-    console.log(response);
 
     const results = await response.json();
-    console.log(results);
+
+    const bids = results.bids;
+
+    bids.forEach((value) => {
+      
+      bidHistory.innerHTML += `
+                    
+                    <div class="text-white container-fluid d-flex">
+                      <div class="d-flex">
+                        <div class="d-flex">
+                          <span>${value.bidderName}</span>
+                          <span>${value.amount}</span>
+                        </div>
+                        <div class="">
+                          
+                        </div>
+                      </div>
+                    </div>
+
+
+      `;
+      
+    })
+
+    const specificImg1 = document.querySelector("#specificImg1");
+    specificImg1.src = results.media[0];
+
+    const specificImg2 = document.querySelector("#specificImg2");
+    specificImg2.src = results.media[1];
+
+    const specificImg3 = document.querySelector("#specificImg3");
+    specificImg3.src = results.media[2];
+
+    const specificImg4 = document.querySelector("#specificImg4");
+    specificImg4.src = results.media[3];
+
+    const specificImg5 = document.querySelector("#specificImg5");
+    specificImg5.src = results.media[4];
+    
+    
 
     if (!response.ok) {
       const msg = displayListingError();
@@ -43,13 +82,13 @@ export async function specificXXX() {
     description.innerHTML = results.description;
     
     const numberOfBids = document.querySelector("#numberOfBids");
-    numberOfBids.innerHTML = results.bids[0];
+    numberOfBids.innerHTML = results._count.bids;
     
     const sellerName = document.querySelector("#sellerName");
-    sellerName.innerHTML = results.name;
+    sellerName.innerHTML = results.seller.name;
     
     const sellerAvatar = document.querySelector("#sellerAvatar");
-    sellerAvatar.innerHTML = results.avatar;
+    sellerAvatar.src = results.seller.avatar;
       
     const formattedCreatedDate = new Date(results.created).toLocaleDateString("en-GB", {
       month: "long",
@@ -93,15 +132,11 @@ export async function specificXXX() {
     const updatedEndTime = document.querySelector("#updatedEndTime");
     updatedEndTime.innerText = formattedUpdatedEndTime;  
       
-
-    const specificImg = document.querySelector("#specificImg");
-    if (results.media[0]) {
-      specificImg.src = results.media[0];
-    } else {
-      specificImg.src = "/assets/vectors/heartLogo_purple.png";
-    }
-  
-
+    const profile = get("profile");
+    const money = profile.credits;
+    const funds = document.querySelector("#funds");
+    funds.innerText = money;
+    
   } catch (error) {
     console.log('error');
     

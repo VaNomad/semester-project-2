@@ -123,35 +123,51 @@
             <div class="d-flex justify-content-center pt-5">
               <div
                 class="d-flex justify-content-center align-items-center bg-transparent"
-                id="specificImg"
               >
-                <img src="" class="big-img" alt="image 1 of listing" />
+                <img
+                  src=""
+                  class="big-img"
+                  id="specificImg1"
+                  alt="image 1 of listing"
+                />
               </div>
             </div>
             <div class="d-flex justify-content-evenly pt-4">
               <div
                 class="d-flex justify-content-center align-items-center ms-2"
-                id="specificImg"
               >
-                <img src="" class="small-img" alt="image 2 of listing" />
+                <img
+                  src=""
+                  class="small-img"
+                  id="specificImg2"
+                  alt="image 2 of listing"
+                />
               </div>
-              <div
-                class="d-flex justify-content-center align-items-center"
-                id="specificImg"
-              >
-                <img src="" class="small-img" alt="image 3 of listing" />
+              <div class="d-flex justify-content-center align-items-center">
+                <img
+                  src=""
+                  class="small-img"
+                  id="specificImg3"
+                  alt="image 3 of listing"
+                />
               </div>
-              <div
-                class="d-flex justify-content-center align-items-center"
-                id="specificImg"
-              >
-                <img src="" class="small-img" alt="image 4 of listing" />
+              <div class="d-flex justify-content-center align-items-center">
+                <img
+                  src=""
+                  class="small-img"
+                  id="specificImg4"
+                  alt="image 4 of listing"
+                />
               </div>
               <div
                 class="d-flex justify-content-center align-items-center me-2"
-                id="specificImg"
               >
-                <img src="" class="small-img" alt="image 5 of listing" />
+                <img
+                  src=""
+                  class="small-img"
+                  id="specificImg5"
+                  alt="image 5 of listing"
+                />
               </div>
             </div>
           </div>
@@ -177,10 +193,18 @@
                   <div class="text-danger" id="endDate"></div>
                   <div class="text-danger" id="endTime"></div>
                 </div>
-
                 <div class="expiration d-flex justify-content-between px-2">
                   <p class="text-white">NUMBER OF BIDS</p>
                   <div class="text-white" id="numberOfBids"></div>
+                </div>
+                <div
+                  class="expiration d-flex justify-content-between px-2"
+                  id="bidHistory"
+                >
+                  <p class="text-white">BID HISTORY</p>
+                  <!-- <div class="text-white container-fluid">
+                  <span></span>
+                </div> -->
                 </div>
                 <div class="bid-amount p-2">
                   <h2 class="body-h2 fs-5 text-start">BID AMOUNT</h2>
@@ -233,10 +257,11 @@
                   id="sellerName"
                 ></h2>
               </div>
-              <div class="seller-img" id="sellerAvatar">
+              <div class="seller-img">
                 <img
                   src=""
                   class="rounded-circle"
+                  id="sellerAvatar"
                   height="30"
                   width="30"
                   alt="Seller Avatar"
@@ -255,7 +280,7 @@
                 />
               </div>
               <div class="credit-value">
-                <h4>3732</h4>
+                <h4 id="funds">3732</h4>
               </div>
             </div>
           </div>

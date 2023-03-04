@@ -2,36 +2,45 @@ import * as storage from "../storage/localstorage.mjs";
 import * as messages from "../ui/displayError.mjs";
 import * as api from "../api/index.mjs";
 
-const form = document.querySelector("#bidForm");
-console.log(form);
-const bidBtn = document.querySelector("#bidBtn");
-const bidMsg = document.querySelector("#bidMsg");
+
 
 export async function bidListener() {
   const token = storage.get("token");
 
-  if(!token) {
-  bidBtn.classList.add("visually-hidden")
-  bidMsg.innerHTML = messages.bidError;
-  } 
+  const form = document.querySelector("form#bidForm");
+  console.log(form);
+  const bidBtn = document.querySelector("#bidBtn");
+  const bidMsg = document.querySelector("#bidMsg");
+  const input = document.querySelector("#bidInput");
+  console.log(input);
+
+  if (!token) {
+    bidBtn.classList.add("visually-hidden")
+    bidMsg.innerHTML = messages.bidError;
+  }
+
+  // const bidInput = document.querySelector("#bidInput");
 
   if (form) {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
-      const bidNow = event.target;
-      console.log(bidNow);
-      
-      const numberValue = bidNow.value;
-      console.log(numberValue);
-  
+
+      const form = event.target;
+      const formData = new FormData(form);
+      // const amount = formData.get("amount");
+      const amount = input.value;
+      const bidAmount = Number(amount);
+
+      console.log(formData);
+
       try {
-        api.addBid(numberValue);
-        console.log(numberValue);
-        
+        api.addBid(bidAmount);
+        console.log(bidAmount);
+
       } catch (error) {
         console.log(error);
       }
     });
   }
- 
+
 }

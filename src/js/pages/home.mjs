@@ -7,7 +7,7 @@ const items = document.querySelector("#products");
 
 export async function listingCards() {
   try {
-    const url = listings_URL;
+    const url = `${listings_URL}/?_active=true`;
     const response = await fetch(url);
     
     if (!response.ok) {
