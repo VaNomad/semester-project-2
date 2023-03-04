@@ -7,6 +7,7 @@ const searchURL = `${baseUrl}${action}`;
 
 const noResults = document.querySelector("#noResults");
 const searchItems = document.querySelector("#searchItems");
+const allListings = document.querySelector("#products");
 const searchForm = document.querySelector("#searchForm");
 const searchValue = document.querySelector("#searchValue");
 const token = localStorage.getItem("Token");
@@ -23,6 +24,7 @@ export async function searchCall() {
     const response = await fetch(`${searchURL}=${searchValue.value}`, data);
     const results = await response.json();
     console.log(results);
+    
 
     if (results < 1) {
       const msg = searchError();
@@ -32,6 +34,8 @@ export async function searchCall() {
         searchCall();
         // location.reload();
       }, 2200);
+    } else {
+      allListings.classList.add("visually-hidden");
     }
     
     searchItems.innerHTML = "";

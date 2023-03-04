@@ -4,7 +4,7 @@ import { get } from "../storage/localstorage.mjs";
 const bidForm = document.querySelector(".form");
 console.log(bidForm);
 
-
+const url = urls.listings_URL;
 const bidInput = document.querySelector("#bidInput");
 const querryString = document.location.search;
 const params = new URLSearchParams(querryString);
@@ -12,7 +12,7 @@ const id = params.get("id");
 
 
 export async function addBid() {
-  const bid_URL = `${urls.listings_URL}/${id}/bids`;
+  const bid_URL = `${url}/${id}/bids`;
   const token = get("token");
   let bidAmount = { amount: Number(bidInput.value) };
 

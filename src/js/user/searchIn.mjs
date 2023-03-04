@@ -6,6 +6,7 @@ const searchURL = `${baseUrl}${action}`;
 
 const noResults = document.querySelector("#noResultsIn");
 const searchItems = document.querySelector("#listingItemsIn");
+const allListings = document.querySelector("#productsIn");
 const searchForm = document.querySelector("#searchFormIn");
 const searchValue = document.querySelector("#searchValueIn");
 const token = localStorage.getItem("Token");
@@ -21,7 +22,6 @@ export async function searchCallIn() {
 
     const response = await fetch(`${searchURL}=${searchValue.value}`, data);
     const results = await response.json();
-    console.log(results);
 
     if (results < 1) {
       const msg = searchError();
@@ -31,7 +31,8 @@ export async function searchCallIn() {
         searchCallIn();
         // location.reload();
       }, 2200);
-      
+    } else {
+      allListings.classList.add("visually-hidden");
     }
     
     searchItems.innerHTML = "";
@@ -42,7 +43,7 @@ export async function searchCallIn() {
       
       <div class="col-lg-4 col-md-6 col-xs-12 text-white-50 p-0">
         <div class="card border-0 bg-secondary bg-opacity-75 m-3 p-3">
-          <a href="/specific.html?id=${search.id}">
+          <a href="/specifiXXX.html?id=${search.id}">
             <div class="">
               <div>
                 <img src="${search.media[0]}" class="card-image" onerror="if (this.src != '/assets/vectors/heartLogo_purple.png') this.src = '/assets/vectors/heartLogo_purple.png';" alt="Listing item image">
@@ -68,12 +69,8 @@ export async function searchCallIn() {
           </a>
         </div>
       </div>
-          
-          
-          `;
-
-      console.log(results);
-      
+             
+      `;
       
     });
   } catch (error) {
@@ -85,7 +82,6 @@ export async function searchFormListenerIn() {
   searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const searchForm = e.target;
-    console.log(searchForm);
     searchCallIn();
     searchForm.reset();
   });

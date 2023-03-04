@@ -52,7 +52,7 @@ export async function listingCards() {
     console.log(error);
   }
 }
-listingCards();
+
 
 export function logoutSuccess() {
   if (window.location.href.includes("?_logoutSuccess=true")) {

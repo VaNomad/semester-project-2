@@ -40,7 +40,7 @@ export async function listingCardsIn() {
       
       <div class="col-lg-4 col-md-6 col-xs-12 text-white-50 p-0">
         <div class="card border-0 bg-secondary bg-opacity-75 m-3 p-3">
-          <a href="/specific.html?id=${product.id}">
+          <a href="/specifiXXX.html?id=${product.id}">
             <div class="">
               <div>
                 <img src="${product.media[0]}" class="card-image" onerror="if (this.src != '/assets/vectors/heartLogo_purple.png') this.src = '/assets/vectors/heartLogo_purple.png';" alt="Listing item image">
