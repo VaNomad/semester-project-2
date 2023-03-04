@@ -6,7 +6,7 @@ const action = "/listings?_tag";
 const searchURL = `${baseUrl}${action}`;
 
 const noResults = document.querySelector("#noResults");
-const searchItems = document.querySelector("#listingItems");
+const searchItems = document.querySelector("#searchItems");
 const searchForm = document.querySelector("#searchForm");
 const searchValue = document.querySelector("#searchValue");
 const token = localStorage.getItem("Token");
@@ -62,7 +62,6 @@ export async function searchCall() {
           </div>
         </div>
       </div>`;
-      console.log(results);
       
       
     });

@@ -74,7 +74,6 @@ export async function listingCardsIn() {
     console.log(error);
   }
 }
-listingCardsIn();
 
 export function loginSuccess() {
   if (window.location.href.includes('/indexIn.html?_loginSuccess=true')) {

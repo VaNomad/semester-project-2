@@ -8,7 +8,6 @@ import * as search from "./user/index.mjs";
 
 function router() {
   const path = window.location.pathname;
-  console.log("path");
 
   switch (path) {
     case "/index.html":
