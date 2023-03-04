@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fbce6b241f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/js/index.mjs" defer type="module"></script>
+    <!-- <script src="/src/js/pages/specifiXXX.mjs" defer type="module"></script> -->
+    <link rel="stylesheet" defer href="/dist/css/styles.css" />
+    <title>Document</title>
+  </head>
+
+  <body class="bg-primary">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-primary p-0">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="/indexIn.html">
+            <img
+              src="/assets/vectors/heartLogo_purple.png"
+              alt="Logo"
+              width="30"
+              height="30"
+              class="d-inline-block mb-1"
+            />
+            CYBID
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active mx-2" href="/indexIn.html">
+                  <img
+                    src="/assets/vectors/home.png"
+                    aria-current="page"
+                    alt="Home icon link"
+                    width="25"
+                    height="25"
+                    class="d-inline-block mb-1"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="/aboutIn.html">
+                  <img
+                    src="/assets/vectors/fat-info.png"
+                    alt="About icon link"
+                    width="25"
+                    height="25"
+                    class="d-inline-block mb-1"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="/createListing.html">
+                  <img
+                    src="/assets/vectors/add-listing.png"
+                    alt="Add listing icon link"
+                    width="25"
+                    height="25"
+                    class="d-inline-block mb-1"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="/profile.html">
+                  <img
+                    src="/assets/images/woman-gaa9f04541_640.jpg"
+                    alt="Profile image"
+                    width="25"
+                    height="25"
+                    class="d-inline-block mb-1 rounded-circle"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link mx-2 border-0 bg-primary"
+                  id="logoutBtn"
+                >
+                  <img
+                    src="/assets/vectors/logout-icon.png"
+                    alt="Log out icon"
+                    width="20"
+                    height="20"
+                    class="d-inline-block mb-1"
+                  />
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="text-white-50 banner-h1 fs-2 fw-light text-center mb-3">
+        LISTING PREVIEW
+      </h1>
+      <div class="row mx-5" id="bidMsg"></div>
+      <div class="row mx-5" id="listingPreview"></div>
+      <div class="container-lg text-center text-white">
+        <div class="row bg-secondary rounded mb-3">
+          <div class="col-lg">
+            <div class="d-flex justify-content-center pt-5">
+              <div
+                class="d-flex justify-content-center align-items-center bg-transparent"
+                id="specificImg"
+              >
+                <img src="" class="big-img" alt="image 1 of listing" />
+              </div>
+            </div>
+            <div class="d-flex justify-content-evenly pt-4">
+              <div
+                class="d-flex justify-content-center align-items-center ms-2"
+                id="specificImg"
+              >
+                <img src="" class="small-img" alt="image 2 of listing" />
+              </div>
+              <div
+                class="d-flex justify-content-center align-items-center"
+                id="specificImg"
+              >
+                <img src="" class="small-img" alt="image 3 of listing" />
+              </div>
+              <div
+                class="d-flex justify-content-center align-items-center"
+                id="specificImg"
+              >
+                <img src="" class="small-img" alt="image 4 of listing" />
+              </div>
+              <div
+                class="d-flex justify-content-center align-items-center me-2"
+                id="specificImg"
+              >
+                <img src="" class="small-img" alt="image 5 of listing" />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="container">
+              <div class="p-5">
+                <div>
+                  <h2 class="body-h2 text-start fs-5 px-2" id="title"></h2>
+                </div>
+                <div class="text-start p-2 mb-2" id="description"></div>
+                <div class="expiration d-flex justify-content-between m-0 px-2">
+                  <p class="text-success">CREATED</p>
+                  <div class="text-success" id="createdDate"></div>
+                  <div class="text-success" id="createdTime"></div>
+                </div>
+                <div class="expiration d-flex justify-content-between px-2">
+                  <p class="text-white">UPDATED</p>
+                  <div class="text-white" id="updatedEndDate"></div>
+                  <div class="text-white" id="updatedEndTime"></div>
+                </div>
+                <div class="expiration d-flex justify-content-between px-2">
+                  <p class="text-danger">EXPIRES</p>
+                  <div class="text-danger" id="endDate"></div>
+                  <div class="text-danger" id="endTime"></div>
+                </div>
+
+                <div class="expiration d-flex justify-content-between px-2">
+                  <p class="text-white">NUMBER OF BIDS</p>
+                  <div class="text-white" id="numberOfBids"></div>
+                </div>
+                <div class="bid-amount p-2">
+                  <h2 class="body-h2 fs-5 text-start">BID AMOUNT</h2>
+                  <form class="form" id="bidForm">
+                    <div class="input-group">
+                      <span class="input-group-text bg-secondary"
+                        ><img
+                          src="/assets/vectors/heartLogo_green.png"
+                          height="30"
+                          alt=""
+                      /></span>
+                      <input
+                        type="number"
+                        name="number"
+                        class="form-control"
+                        id="bidInput"
+                        aria-label="Amount (to the nearest cybid credit and dollar)"
+                      />
+                      <span class="input-group-text bg-secondary text-white"
+                        >.00</span
+                      >
+                    </div>
+                    <p class="text-start mt-1">In credits and/or $</p>
+                    <div class="p-2">
+                      <button
+                        class="w-100 px-5 py-2 btn btn-lg btn-outline-success banner-h1 fs-2"
+                        id="bidBtn"
+                        type="submit"
+                      >
+                        PLACE BID
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row bg-secondary rounded">
+          <div
+            class="col d-flex justify-content-evenly align-items-center mt-1"
+          >
+            <div class="seller">
+              <h2 class="banner-h1 fs-3 text-white-50">SELLER</h2>
+            </div>
+            <div class="seller d-flex">
+              <div class="seller-name me-3">
+                <h2
+                  class="text-danger fs-4 fw-light text-uppercase"
+                  id="sellerName"
+                ></h2>
+              </div>
+              <div class="seller-img" id="sellerAvatar">
+                <img
+                  src=""
+                  class="rounded-circle"
+                  height="30"
+                  width="30"
+                  alt="Seller Avatar"
+                />
+              </div>
+            </div>
+            <div class="credits">
+              <h2 class="banner-h1 fs-3 text-white-50">YOUR CREDITS</h2>
+            </div>
+            <div class="available-credits d-flex">
+              <div class="heart-logo">
+                <img
+                  src="/assets/vectors/heartLogo_green.png"
+                  height="30"
+                  alt="credit heart symbol"
+                />
+              </div>
+              <div class="credit-value">
+                <h4>3732</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="d-flex justify-content-center">
+        <p class="mt-4 mb-3 text-muted banner-h1 fw-lighter">
+          Sjur Hassel © 2023
+          <a href="https://www.instagram.com/sjur.io/"
+            ><img src="/assets/vectors/logo_sjurio.png" width="40"
+          /></a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

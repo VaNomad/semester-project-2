@@ -1,8 +1,8 @@
 import { listings_URL } from "../api/constants.mjs";
 import { displayLoginSuccess } from "../ui/displayError.mjs";
 
-const listings = document.querySelector("#listingItemsIn");
 const loginMsg = document.querySelector("#loginMsg");
+const itemsIn = document.querySelector("#productsIn");
 
 
 export async function listingCardsIn() {
@@ -18,7 +18,7 @@ export async function listingCardsIn() {
 
     const results = await response.json();
     // console.log(results);
-    listings.innerHTML = "";
+    itemsIn.innerHTML = "";
     results.forEach((product) => {
 
 
@@ -35,7 +35,7 @@ export async function listingCardsIn() {
       // });
       // ———————————————————————————————————————————————————————————————————————————————
 
-      listings.innerHTML += `
+      itemsIn.innerHTML += `
             
       
       <div class="col-lg-4 col-md-6 col-xs-12 text-white-50 p-0">
