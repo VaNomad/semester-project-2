@@ -32,17 +32,10 @@
   </head>
 
   <body class="bg-primary">
-    <div
-      class="d-flex justify-content-center align-items-center spinner-wrapper visually-hidden"
-    >
-      <div class="spinner-border text-white-50" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-    </div>
     <header>
       <nav class="navbar navbar-expand-lg bg-primary p-0">
         <div class="container-fluid">
-          <a class="navbar-brand text-white" href="#">
+          <a class="navbar-brand text-white" href="/index.html">
             <img
               src="/assets/vectors/heartLogo_purple.png"
               alt="Logo"
@@ -65,7 +58,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <!-- <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link active mx-2" href="/index.html">
                   <img
                     src="/assets/vectors/home.png"
@@ -76,8 +69,8 @@
                     class="d-inline-block mb-1"
                   />
                 </a>
-              </li> -->
-              <li class="nav-item">
+              </li>
+              <!-- <li class="nav-item">
                 <a class="nav-link mx-2" href="/about.html">
                   <img
                     src="/assets/vectors/fat-info.png"
@@ -87,7 +80,7 @@
                     class="d-inline-block mb-1"
                   />
                 </a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link mx-2" href="/login.html">
                   <img
@@ -99,69 +92,52 @@
                   />
                 </a>
               </li>
+              <!-- <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li> -->
             </ul>
           </div>
         </div>
       </nav>
-      <div class="banner">
-        <div class="row">
-          <div class="col p-0">
-            <img
-              src="/assets/images/pexels-elijah-o'donnell-3439214.jpg"
-              class="banner-img"
-              alt="banner image of young woman looking at smartphone"
-            />
-            <div class="text-overlay d-flex flex-md-column">
-              <div
-                class="navbar-brand text-white text-opacity-75 text-center"
-                href="#"
+    </header>
+
+    <main class="d-flex align-items-center justify-content-center about-image">
+      <div class="d-flex bg-secondary rounded bg-opacity-50 w-75 mx-auto m-5">
+        <div class="d-flex bg-secondary rounded bg-opacity-50 m-5">
+          <div class="bg-secondary rounded bg-opacity-50 p-5">
+            <h1 class="text-white banner-h1 fs-1">ABOUT CYBID</h1>
+            <p class="py-5 mx-5 text-white-">
+              CYBID c is an online fashion auction that specializes in good
+              second hand designer deals. Whether you are browsing, buying, or
+              selling, we are striving to use our skills to bring you a huge
+              variety of products from trinkets to bags and all the way to
+              dresses and bracelets. All listings are of well known fashion
+              brands. We try our best to make the process as easy and exciting
+              as we can, and here at CYBID there are no hidden fees or extra
+              add-ons with the winning bid to think about. We have a great team
+              to help you if you any worries, or need guidance about our, yours
+              or a sellers terms and conditions. If you need to get in touch
+              with us you can reach us through these channels:
+            </p>
+            <div class="">
+              <p
+                class="d-flex align-items-center justify-content-start mx-5 text-white"
               >
-                <img
-                  src="/assets/vectors/heartLogo_purple.png"
-                  alt="Logo"
-                  width="30"
-                  height="30"
-                  class="d-inline-block mb-1"
-                />
-                CYBID
-              </div>
-              <h1 class="banner-h1 text-white text-center display-3 fw-bold">
-                FASHION AUCTION
-              </h1>
-              <p class="banner-tagline text-danger text-center fs-4">
-                HOTTEST DEALS ANYWHERE
+                Email: hello@cybid.helpdesk.com
+              </p>
+              <p
+                class="d-flex align-items-center justify-content-start mx-5 text-white"
+              >
+                Phone: +4732 777 444 555
+              </p>
+              <p
+                class="d-flex text-white mx-5 banner-h1 fs-5 justify-content-end"
+              >
+                Best regards, the CYBID Team
               </p>
             </div>
           </div>
         </div>
-      </div>
-    </header>
-
-    <div class="mx-auto w-50 p-1 m-3" id="logoutMsg"></div>
-    <div class="mx-auto w-50 p-1 m-3" id="noResults"></div>
-
-    <main>
-      <div class="container-fluid">
-        <nav class="navbar">
-          <div class="container">
-            <h1 class="navbar-brand text-white-50">LISTINGS</h1>
-            <form class="d-flex justify-content-between" id="searchForm">
-              <input
-                class="form-control me-2"
-                id="searchValue"
-                type="search"
-                placeholder="search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </form>
-          </div>
-        </nav>
-
-        <div class="row mx-5" id="products"></div>
-        <div class="row mx-5" id="searchItems"></div>
       </div>
     </main>
 

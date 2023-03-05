@@ -1,0 +1,27 @@
+// —————————— VARIABLES ———————— //
+
+// my-colours-start
+$success: #24be20;
+$danger: #f27b7e;
+$primary: #3d3044;
+$secondary: #453a4b;
+$tertiary: #822f95;
+$quarternary: #d02996;
+$quinary: #989898;
+$senary: #d0d0d0;
+$septenary: #bfbfbf;
+$text-senary: #d0d0d0;
+// $octonary:
+// $nonary:
+// $denary:
+
+// my-colours-end
+
+//  typography-start
+$font-family-sans-serif: "Open Sans", system-ui, -apple-system, "Segoe UI",
+  "Kanit", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+$font-family-monospace: "Open Sans", SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
+//  typography-end
+// @include gradient-x($start-color: $primary, $end-color: $black, $start-percent: 0%, $end-percent: 100%);
+// $enable-gradients: true;

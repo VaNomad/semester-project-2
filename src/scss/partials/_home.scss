@@ -1,0 +1,52 @@
+.banner-img {
+  max-height: 500px;
+  min-width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.text-overlay {
+  margin-top: -45vh;
+  margin-left: 44vw;
+}
+
+.banner-h1 {
+  font-family: "Kanit", sans-serif;
+  letter-spacing: 5px;
+}
+
+.card-image {
+  max-height: 250px;
+  min-width: 100%;
+  object-fit: contain;
+  z-index: 0;
+}
+
+.about-image {
+  min-height: 800px;
+  background-image: url("/assets/images/pexels-elijah-o'donnell-3439214.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 25%;
+}
+
+.vh-custom {
+  height: 93vh;
+}
+
+// spinner
+
+.spinner-wrapper {
+  background-color: $primary;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  transition: all 0.3s ease-in-out;
+}
+
+.spinner-border {
+  height: 100px;
+  width: 100px;
+  border-width: 3px;
+}

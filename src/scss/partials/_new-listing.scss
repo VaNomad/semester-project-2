@@ -1,0 +1,14 @@
+.big-img {
+  height: 26rem;
+  width: 26rem;
+  object-fit: cover;
+  border-radius: 5px;
+  background-color: $white;
+}
+.small-img {
+  height: 4rem;
+  width: 4rem;
+  object-fit: cover;
+  border-radius: 5px;
+  background-color: $white;
+}

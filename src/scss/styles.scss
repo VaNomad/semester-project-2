@@ -1,1 +1,14 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss"
+// Bootstrap Variable Overrides
+@import "./partials/variables";
+
+// Bootstrap Styles
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Custom Styles
+@import "./partials/navbar";
+@import "./partials/home";
+@import "./partials/body";
+@import "./partials/register";
+@import "./partials/new-listing";
+@import "./partials/specific";
+@import "./partials/login";
