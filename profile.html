@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/js/index.mjs" defer type="module"></script>
     <link rel="stylesheet" defer href="/dist/css/styles.css" />
     <title>Document</title>
   </head>
@@ -79,6 +80,17 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a class="nav-link mx-2" href="/profile.html">
+                  <img
+                    src="/assets/images/woman-gaa9f04541_640.jpg"
+                    alt="Profile image"
+                    width="25"
+                    height="25"
+                    class="d-inline-block mb-1 rounded-circle profilePicture"
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
                 <button
                   class="nav-link mx-2 border-0 bg-primary"
                   id="logoutBtn"
@@ -106,8 +118,9 @@
         <div class="row d-flex justify-content-center">
           <div class="col-4 my-5">
             <img
-              class="avatar-img rounded-circle"
-              src="/assets/images/woman-gaa9f04541_640.jpg"
+              class="avatar-img rounded-circle profilePicture"
+              id="avatarImg"
+              src=""
               alt=""
             />
           </div>

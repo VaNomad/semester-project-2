@@ -2,7 +2,7 @@
 import * as pages from "./pages/index.mjs";
 import * as handlers from "./handlers/index.mjs";
 import * as search from "./user/index.mjs";
-import * as profile from "./user/profile.mjs";
+
 
 
 
@@ -32,24 +32,36 @@ function router() {
       pages.listingCardsIn();
       pages.loginSuccess();
       search.searchFormListenerIn();
+      pages.userImg();
       return;
     
     case "/specific.html":
       pages.specificPreview();
       handlers.bidListener();
       handlers.logOutUser();
+      pages.userImg();
       return;
     
     case "/specifiXXX.html":
       pages.specificXXX();
       handlers.bidListener();
       handlers.logOutUser();
+      pages.userImg();
       return;
     
     case "/profile.html":
       handlers.logOutUser();
-      profile.getProfile();
-      profile.updateAvatar();
+      search.getProfile();
+      pages.userImg();
+      return;
+    
+    case "/about.html":
+      pages.userImg();
+      return;
+    
+    case "/aboutIn.html":
+      pages.userImg();
+      return;
   }
   
 }
