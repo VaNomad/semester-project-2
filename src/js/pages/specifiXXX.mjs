@@ -31,8 +31,8 @@ export async function specificXXX() {
       
       bidHistory.innerHTML += `
                     
-                    <div class="text-white container-fluid d-flex">
-                      <div class="d-flex">
+                    <div class="text-white container-fluid d-flex justify-content-center">
+                      <div class="">
                         <div class="d-flex">
                           <span>${value.bidderName}</span>
                           <span>${value.amount}</span>
@@ -91,7 +91,7 @@ export async function specificXXX() {
     sellerAvatar.src = results.seller.avatar;
       
     const formattedCreatedDate = new Date(results.created).toLocaleDateString("en-GB", {
-      month: "long",
+      month: "short",
       day: "numeric",
     });
     const createdDate = document.querySelector("#createdDate");
@@ -105,7 +105,7 @@ export async function specificXXX() {
     createdTime.innerText = formattedCreatedTime;
 
     const formattedEndDate = new Date(results.endsAt).toLocaleDateString("en-GB", {
-      month: "long",
+      month: "short",
       day: "numeric",
     });
     const endDate = document.querySelector("#endDate");
@@ -119,7 +119,7 @@ export async function specificXXX() {
     endTime.innerText = formattedEndTime;
 
     const formattedUpdatedEndDate = new Date(results.updated).toLocaleDateString("en-GB", {
-      month: "long",
+      month: "short",
       day: "numeric",
     });
     const updatedEndDate = document.querySelector("#updatedEndDate");

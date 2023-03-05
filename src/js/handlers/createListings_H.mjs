@@ -15,18 +15,6 @@ export function createListingListener() {
 
       console.log("listing", listing);
 
-      // if (!listing.tags.trim()) {
-      //   delete listing.tags;
-      // } else {
-      //   listing.tags = listing.tags.split(",");
-      // }
-
-      if (!listing.media.trim()) {
-        delete listing.media;
-      } else {
-        listing.media = listing.media.split(",");
-      }
-
       try {
         await createListing(listing);
         listingCardsIn();
@@ -36,9 +24,9 @@ export function createListingListener() {
           
           form.reset();
                                         
-          setTimeout(() => {
-              window.location.replace("/profile.html");
-              }, 3500);
+          // setTimeout(() => {
+          //     window.location.replace("/profile.html");
+          //     }, 3500);
                                 
         }
       } catch (error) {

@@ -127,115 +127,12 @@
       <h1>CREATE NEW LISTING</h1>
       <div class="container-lg bg-secondary rounded text-center text-white">
         <div class="row">
-          <!-- <div class="col">
-            <div class="d-flex justify-content-center p-5">
-              <div
-                class="big-img d-flex justify-content-center align-items-center p-5"
-              >
-                <h1 class="text-black-50 fs-5">ADD IMG</h1>
-              </div>
-            </div>
-            <div class="d-flex justify-content-around py-4">
-              <div
-                class="small-img d-flex ms-5 justify-content-center align-items-center"
-              >
-                <h2 class="text-black-50 fs-6">ADD IMG</h2>
-              </div>
-              <div
-                class="small-img d-flex justify-content-center align-items-center"
-              >
-                <h2 class="text-black-50 fs-6">ADD IMG</h2>
-              </div>
-              <div
-                class="small-img d-flex me-5 justify-content-center align-items-center"
-              >
-                <h2 class="text-black-50 fs-6">ADD IMG</h2>
-              </div>
-            </div>
-          </div> -->
           <div class="col register-form">
-            <form>
+            <form id="createForm">
               <div class="container">
                 <div
                   class="d-flex align-content-between row bg-secondary rounded p-5"
                 >
-                  <!-- <div class="col inner-form rounded mx-auto ">
-                    <div class="form-floating">
-                      <label for="basic-url" class="form-label"
-                        >Your vanity URL</label
-                      >
-                      <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon3">Avatar</span>
-                        <input
-                          type="url"
-                          name="avatar"
-                          class="form-control"
-                          id="basic-url"
-                          placeholder="https://URL-example.com/image"
-                        />
-                      </div>
-                    </div>
-                    <div class="form-floating">
-                      <label for="basic-url" class="form-label"
-                        >Your vanity URL</label
-                      >
-                      <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon3">Avatar</span>
-                        <input
-                          type="url"
-                          name="avatar"
-                          class="form-control"
-                          id="basic-url"
-                          placeholder="https://URL-example.com/image"
-                        />
-                      </div>
-                    </div>
-                    <div class="form-floating">
-                      <label for="basic-url" class="form-label"
-                        >Your vanity URL</label
-                      >
-                      <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon3">Avatar</span>
-                        <input
-                          type="url"
-                          name="avatar"
-                          class="form-control"
-                          id="basic-url"
-                          placeholder="https://URL-example.com/image"
-                        />
-                      </div>
-                    </div>
-                    <div class="form-floating">
-                      <label for="basic-url" class="form-label"
-                        >Your vanity URL</label
-                      >
-                      <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon3">Avatar</span>
-                        <input
-                          type="url"
-                          name="avatar"
-                          class="form-control"
-                          id="basic-url"
-                          placeholder="https://URL-example.com/image"
-                        />
-                      </div>
-                    </div>
-                    <div class="form-floating">
-                      <label for="basic-url" class="form-label"
-                        >Your vanity URL</label
-                      >
-                      <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon3">Avatar</span>
-                        <input
-                          type="url"
-                          name="avatar"
-                          class="form-control"
-                          id="basic-url"
-                          placeholder="https://URL-example.com/image"
-                        />
-                      </div>
-                    </div>
-                  </div> -->
                   <div class="col inner-form rounded mx-auto p-5 pt-0">
                     <div class="form-floating">
                       <label for="basic-url" class="form-label"
@@ -263,6 +160,16 @@
                         placeholder="Title"
                       />
                       <label class="text-dark" for="floatingInput">TITLE</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        name="tags"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="Title"
+                      />
+                      <label class="text-dark" for="floatingInput">TAGS</label>
                     </div>
                     <div class="form-floating mb-3">
                       <label class="text-dark" for="textarea"

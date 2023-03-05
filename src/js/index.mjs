@@ -69,7 +69,7 @@ function router() {
     
     case "/createListing.html":
       search.userImg();
-      pages.createListing();
+      // pages.createListing();
       handlers.createListingListener();
       return;
   }
