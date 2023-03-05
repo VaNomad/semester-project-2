@@ -57,7 +57,6 @@ function router() {
       handlers.logOutUser();
       search.getProfile();
       search.userImg();
-      search.userImg();
       return;
     
     case "/about.html":
@@ -66,6 +65,12 @@ function router() {
     
     case "/aboutIn.html":
       search.userImg();
+      return;
+    
+    case "/createListing.html":
+      search.userImg();
+      pages.createListing();
+      handlers.createListingListener();
       return;
   }
   

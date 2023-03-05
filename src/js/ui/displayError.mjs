@@ -173,3 +173,4 @@ export function bidError() {
   return msg;
             
 }
+

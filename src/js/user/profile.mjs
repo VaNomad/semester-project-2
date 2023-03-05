@@ -1,4 +1,4 @@
-// import { profiles_URL } from "../api/constants.mjs";
+import { profiles_URL } from "../api/constants.mjs";
 import { get } from "../storage/localstorage.mjs";
 
 // const token = get("token");
@@ -71,7 +71,7 @@ import { get } from "../storage/localstorage.mjs";
 //   return await response.json()
 // }
 
-const profiles_URL = "https://nf-api.onrender.com/api/v1/auction/profiles";
+// const profiles_URL = "https://nf-api.onrender.com/api/v1/auction/profiles";
 
 // export function get(key) {
 //   try {
@@ -82,7 +82,7 @@ const profiles_URL = "https://nf-api.onrender.com/api/v1/auction/profiles";
 //   }
 // }
 
-export async function userProfile() {
+export function userProfile() {
     
     try {
         const getProfile = JSON.parse(localStorage.profile);
@@ -93,9 +93,10 @@ export async function userProfile() {
     }
 }
 
+
 export async function getProfile() {
   const token = get("token");
-  const url = `${profiles_URL}/${userProfile()}/media`;
+  const url = `${profiles_URL}/${userProfile()}`;
   const data = {
     headers: {
       "content-Type": "application/json; charset=UTF-8",
@@ -103,9 +104,13 @@ export async function getProfile() {
     },
     method: "get",
   };
+  console.log(data);
+  
 
   try {
     const response = await fetch(url, data);
+    console.log(response);
+    
     const result = await response.json();
     console.log(result);
     return result;
@@ -114,4 +119,4 @@ export async function getProfile() {
   }
 }
 
-getProfile();
+
