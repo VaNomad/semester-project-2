@@ -247,7 +247,7 @@
                         >
                         <input
                           type="url"
-                          name="avatar"
+                          name="listing"
                           class="form-control"
                           id="basic-url"
                           placeholder="https://URL-example.com/image"
@@ -256,7 +256,8 @@
                     </div>
                     <div class="form-floating mb-3">
                       <input
-                        type="title"
+                        type="text"
+                        name="title"
                         class="form-control"
                         id="floatingInput"
                         placeholder="Title"
@@ -268,27 +269,24 @@
                         >DESCRIPTION</label
                       >
                       <textarea
+                        type="text"
+                        name="description"
                         class="form-control h-100"
                         id="textarea"
                         rows="5"
                       ></textarea>
                     </div>
-                    <div class="form-floating mb-3">
-                      <input
-                        type="password"
-                        class="form-control"
-                        id="floatingPassword"
-                        placeholder="Password"
-                      />
-                      <label class="text-dark" for="floatingPassword"
-                        >Password</label
-                      >
-                    </div>
+                    <!-- <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
+                    <label class="text-dark" for="floatingPassword">Password</label>
+                  </div> -->
                     <div
                       class="form-floating d-md-flex flex-sm-row justify-content-between mb-5"
                     >
-                      <div class="d-flex flex-column text-start">
-                        <label for="dateInput" class="form-label">DATE</label>
+                      <div class="d-flex flex-column text-center mx-auto">
+                        <label for="dateInput" class="form-label"
+                          >END DATE</label
+                        >
                         <input
                           type="date"
                           name="date"
@@ -296,9 +294,9 @@
                           id="dateInput"
                         />
                       </div>
-                      <div class="d-flex flex-column text-start">
+                      <div class="d-flex flex-column text-center mx-auto">
                         <label for="floatingInput" class="form-label"
-                          >TIME</label
+                          >END TIME</label
                         >
                         <input
                           type="time"
