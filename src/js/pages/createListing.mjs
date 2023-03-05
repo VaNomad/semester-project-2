@@ -11,10 +11,19 @@ export async function createListing(listing) {
     const url = listings_URL;
     const token = get("token");
 
+    const media = [listing.listing];
     const title = listing.title;
-    const desciription = listing.desciription;
-    const media = listing.media;
-    const endsAt = new Date(listing.endsAt.date).toDateString();
+    const tags = listing.tags.split(",");
+    const description = listing.description;
+    const endsAt = new Date(listing.date);
+
+    const body = {
+      "media": media,
+      "title": title,
+      "tags": tags,
+      "description": description,
+      "endsAt": endsAt
+    }
 
     const options = {
       headers: {
@@ -23,17 +32,12 @@ export async function createListing(listing) {
       },
 
       method: "POST",
-      body: JSON.stringify({
-        title,
-        desciription,
-        media,
-        endsAt,
-      }),
+      body: JSON.stringify(body),
     };
 
     const response = await fetch(url, options)
     const result = await response.json();
-    console.log(response);
+    console.log(result);
 
     if (response.ok) {
       displayMsg.displayListingSuccess();

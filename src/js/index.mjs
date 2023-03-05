@@ -39,12 +39,12 @@ function router() {
       search.userImg();
       return;
     
-    case "/specific.html":
-      pages.specificPreview();
-      handlers.bidListener();
-      handlers.logOutUser();
-      search.userImg();
-      return;
+    // case "/specific.html":
+    //   pages.specificPreview();
+    //   handlers.bidListener();
+    //   handlers.logOutUser();
+    //   search.userImg();
+    //   return;
     
     case "/specifiXXX.html":
       pages.specificXXX();
@@ -69,7 +69,6 @@ function router() {
     
     case "/createListing.html":
       search.userImg();
-      // pages.createListing();
       handlers.createListingListener();
       return;
   }
