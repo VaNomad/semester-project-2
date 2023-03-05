@@ -1,8 +1,24 @@
 import { listings_URL } from "../api/constants.mjs";
 import { displayLoginSuccess } from "../ui/displayError.mjs";
+import { get } from "../storage/localstorage.mjs";
 
 const loginMsg = document.querySelector("#loginMsg");
 const itemsIn = document.querySelector("#productsIn");
+
+// const profilePicture = document.querySelector("#profilePicture");
+// const profileImg = get("profile");
+// profileImg.src = profileImg.avatar;
+
+export function userImg() {
+  const token = get("token");
+  if (token) {
+    const profilePicture = document.querySelector(".profilePicture");
+    const profileImg = get("profile");
+    profilePicture.src = profileImg.avatar;
+  }
+}
+
+
 
 
 export async function listingCardsIn() {
@@ -13,8 +29,6 @@ export async function listingCardsIn() {
     if (!response.ok) {
       return "error", `Could not get the listings from the server`;
     }
-
-
 
     const results = await response.json();
     // console.log(results);
