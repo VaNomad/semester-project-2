@@ -10,6 +10,7 @@ function router() {
   const path = window.location.pathname;
 
   switch (path) {
+    case "/":
     case "/index.html":
       pages.listingCards();
       pages.logoutSuccess();
