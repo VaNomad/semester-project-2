@@ -1,4 +1,4 @@
-import { profiles_URL } from "../api/constants.mjs";
+// import { profiles_URL } from "../api/constants.mjs";
 import { get } from "../storage/localstorage.mjs";
 
 // const token = get("token");
@@ -13,7 +13,7 @@ import { get } from "../storage/localstorage.mjs";
 // const profileName = user.name;
 // console.log(profileName);
 // avatar.src = user.avatar
-console.log('its working');
+
 
 
 // const avatarImg = document.querySelector("#avatarImg");
@@ -30,34 +30,34 @@ console.log('its working');
 // console.log(profileName);
 
 
-export async function userProfile() {
+// export async function userProfile() {
     
-    try {
-        const getProfile = JSON.parse(localStorage.profile);
-        const name = getProfile.name;
-        return name;
-    } catch (error) {
-        console.log("Could not get the profile name");
-    }
-}
-userProfile();
+//     try {
+//         const getProfile = JSON.parse(localStorage.profile);
+//         const name = getProfile.name;
+//         return name;
+//     } catch (error) {
+//         console.log("Could not get the profile name");
+//     }
+// }
+// userProfile();
 
-export async function getProfile() {
-  const token = get("token");
-  const url = `${profiles_URL}${userProfile}/media`;
-  const data = {
-    headers: {
-      "content-Type": "application/json; charset=UTF-8",
-      Authorization: `Bearer ${token}`,
-    },
-    method: "put",
-  };
+// export async function getProfile() {
+//   const token = get("token");
+//   const url = `${profiles_URL}${userProfile}/media`;
+//   const data = {
+//     headers: {
+//       "content-Type": "application/json; charset=UTF-8",
+//       Authorization: `Bearer ${token}`,
+//     },
+//     method: "put",
+//   };
 
-  const response = await fetch(url, data);
-  console.log(response);
+//   const response = await fetch(url, data);
+//   console.log(response);
 
-  return await response.json()
-}
+//   return await response.json()
+// }
 
 // export async function updateAvatar(newAvatar) {
 
@@ -70,3 +70,48 @@ export async function getProfile() {
 
 //   return await response.json()
 // }
+
+const profiles_URL = "https://nf-api.onrender.com/api/v1/auction/profiles";
+
+// export function get(key) {
+//   try {
+//     const value = localStorage.getItem(key);
+//     return JSON.parse(value);
+//   } catch {
+//     return null
+//   }
+// }
+
+export async function userProfile() {
+    
+    try {
+        const getProfile = JSON.parse(localStorage.profile);
+        const name = getProfile.name;
+        return name;
+    } catch (error) {
+        console.log("Could not get the profile name");
+    }
+}
+
+export async function getProfile() {
+  const token = get("token");
+  const url = `${profiles_URL}/${userProfile()}/media`;
+  const data = {
+    headers: {
+      "content-Type": "application/json; charset=UTF-8",
+      Authorization: `Bearer ${token}`,
+    },
+    method: "get",
+  };
+
+  try {
+    const response = await fetch(url, data);
+    const result = await response.json();
+    console.log(result);
+    return result;
+  } catch (error) {
+    console.log("Error retrieving profile media", error);
+  }
+}
+
+getProfile();
