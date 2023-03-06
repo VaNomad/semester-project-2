@@ -1,11 +1,7 @@
 import * as urls from "./constants.mjs"
 import { get } from "../storage/localstorage.mjs";
 
-// const bidForm = document.querySelector(".form");
-// console.log(bidForm);
-
 const url = urls.listings_URL;
-// const bidInput = document.querySelector("#bidInput");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
@@ -26,10 +22,8 @@ export async function addBid(bidAmount) {
     });
 
     const results = await response.json();
-    console.log(results);
     location.reload();
     return results;
-    
     
   } catch (error) {
     console.log(error);

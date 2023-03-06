@@ -16,7 +16,6 @@ function router() {
       pages.logoutSuccess();
       search.searchFormListener();
       search.userImg();
-      // display.preLoader();
       return;
     
     case "/register.html":
@@ -38,14 +37,7 @@ function router() {
       search.searchFormListenerIn();
       search.userImg();
       return;
-    
-    // case "/specific.html":
-    //   pages.specificPreview();
-    //   handlers.bidListener();
-    //   handlers.logOutUser();
-    //   search.userImg();
-    //   return;
-    
+
     case "/specifiXXX.html":
       pages.specificXXX();
       handlers.bidListener();

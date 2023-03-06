@@ -13,22 +13,15 @@ export function createListingListener() {
       const formData = new FormData(form);
       const listing = Object.fromEntries(formData.entries());
 
-      console.log("listing", listing);
-
       try {
         await createListing(listing);
         listingCardsIn();
         displayListingSuccess();
 
         if (listingCardsIn()) {
-          
           form.reset();
-                                        
-          // setTimeout(() => {
-          //     window.location.replace("/profile.html");
-          //     }, 3500);
-                                
         }
+
       } catch (error) {
         displayListingError(form, error, createError);
       }

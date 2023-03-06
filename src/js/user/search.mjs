@@ -1,7 +1,6 @@
 import { baseUrl } from "../api/constants.mjs";
 import { searchError } from "../ui/displayError.mjs";
 
-
 const action = "/listings?_tag";
 const searchURL = `${baseUrl}${action}`;
 
@@ -23,8 +22,6 @@ export async function searchCall() {
 
     const response = await fetch(`${searchURL}=${searchValue.value}`, data);
     const results = await response.json();
-    console.log(results);
-    
 
     if (results < 1) {
       const msg = searchError();
@@ -32,7 +29,6 @@ export async function searchCall() {
       setTimeout(() => {
         noResults.remove();
         searchCall();
-        // location.reload();
       }, 2200);
     } else {
       allListings.classList.add("visually-hidden");
@@ -78,7 +74,6 @@ export async function searchFormListener() {
   searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const searchForm = e.target;
-    console.log(searchForm);
     searchCall();
     searchForm.reset();
   });

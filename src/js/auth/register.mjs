@@ -1,7 +1,4 @@
 import { register_URL } from "../api/constants.mjs";
-// import * as displayMsg from "../ui/displayError.mjs";
-
-console.log(register_URL);
 
 export async function register(profile) {
   try {
@@ -15,12 +12,9 @@ export async function register(profile) {
     };
 
     const response = await fetch(url, userReg);
-
     const result = await response.json();
-    console.log(response);
 
     if (response.ok) {
-      // displayMsg.displayRegisterSuccess();
       window.location.replace("/login.html?_registerSuccess=true");
       return result;
     }

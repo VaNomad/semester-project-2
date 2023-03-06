@@ -4,7 +4,6 @@ import { displayLogoutSuccess } from "../ui/displayError.mjs";
 const logoutMsg = document.querySelector("#logoutMsg");
 const items = document.querySelector("#products");
 
-
 export async function listingCards() {
   try {
     const url = `${listings_URL}/?_active=true`;
@@ -44,15 +43,12 @@ export async function listingCards() {
             </div>
           </div>
         </div>
-            
-            
             `;
     });
   } catch (error) {
     console.log(error);
   }
 }
-
 
 export function logoutSuccess() {
   if (window.location.href.includes("?_logoutSuccess=true")) {

@@ -2,10 +2,7 @@ import { listings_URL } from "../api/constants.mjs";
 import * as displayMsg from "../ui/displayError.mjs";
 import { get } from "../storage/localstorage.mjs";
 
-console.log(listings_URL);
-
 export async function createListing(listing) {
-  console.log(listing);
   
   try {
     const url = listings_URL;
@@ -37,15 +34,12 @@ export async function createListing(listing) {
 
     const response = await fetch(url, options)
     const result = await response.json();
-    console.log(result);
 
     if (response.ok) {
       displayMsg.displayListingSuccess();
-      // window.location.replace("/indexIn.html?_listingSuccess=true");
+      window.location.replace("/indexIn.html?_listingSuccess=true");
       return result;
     }
-
-    console.log(result);
     
   } catch (error) {
     console.log(error);

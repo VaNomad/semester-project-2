@@ -8,7 +8,6 @@ const id = params.get("id");
 
 const url = `${listings_URL}/${id}/?_seller=true&_bids=true`;
 const listingPreview = document.querySelector("#listingPreview");
-// const listingMsg = document.querySelector("#listingMsg");
 
 export async function specificPreview() {
   const data = {
@@ -20,19 +19,7 @@ export async function specificPreview() {
   };
 
   const response = await fetch(url, data);
-  console.log(response);
-
   const results = await response.json();
-  console.log(results);
-
-  // if (!response.ok) {
-  //   const msg = displayListingError();
-  //   listingMsg.append(msg);
-  //   setTimeout(() => {
-  //     listingMsg.remove();
-  //     history.go(-1);
-  //   }, 2200);
-  // }
 
   const formattedCreatedDate = new Date(results.created).toLocaleDateString("en-GB", {
     month: "long",
@@ -64,7 +51,6 @@ export async function specificPreview() {
     hour: "2-digit",
     minute: "2-digit",
   });
-  
 
   listingPreview.innerHTML = `
             
@@ -117,7 +103,6 @@ export async function specificPreview() {
                       <div class="text-danger">${formattedEndDate}</div>
                       <div class="text-danger">${formattedEndTime}</div>
                     </div>
-                    
                     <div class="expiration d-flex justify-content-between align-items-center px-2">
                       <p>NUMBER OF BIDS</p>
                       ${results._count.bids}
@@ -171,7 +156,5 @@ export async function specificPreview() {
               </div>
             </div>
           </div>
-            
-            
           `;
 }

@@ -1,57 +1,25 @@
 import { listings_URL } from "../api/constants.mjs";
 import { displayLoginSuccess } from "../ui/displayError.mjs";
-// import { get } from "../storage/localstorage.mjs";
 
 const loginMsg = document.querySelector("#loginMsg");
 const itemsIn = document.querySelector("#productsIn");
-
-// const profilePicture = document.querySelector("#profilePicture");
-// const profileImg = get("profile");
-// profileImg.src = profileImg.avatar;
-
-// export function userImg() {
-//   const token = get("token");
-//   if (token) {
-//     const profilePicture = document.querySelector(".profilePicture");
-//     const profileImg = get("profile");
-//     profilePicture.src = profileImg.avatar;
-//   }
-// }
-
-
-
 
 export async function listingCardsIn() {
   try {
     const url = `${listings_URL}/?_active=true`;
     const response = await fetch(url);
-    // console.log(response);
+
     if (!response.ok) {
       return "error", `Could not get the listings from the server`;
     }
 
     const results = await response.json();
-    // console.log(results);
+
     itemsIn.innerHTML = "";
     results.forEach((product) => {
-
-
-      // ——————————————————————————————————————————————————————————highest bid sorting
-      // const sortedListings = listing.sort((a, b) => {
-      //   return b.bids.amount - a.bids.amount
-      // });
-
-      // const sortedListings = sortedListings.map((sortedListing) => {
-      //   sortedListing.bids.sort((a, b) => {
-      //     return a.amount - b.amount;
-      //   });
-      //   console.log(sortedListing);
-      // });
-      // ———————————————————————————————————————————————————————————————————————————————
-
+     
       itemsIn.innerHTML += `
             
-      
       <div class="col-lg-4 col-md-6 col-xs-12 text-white-50 p-0">
         <div class="card border-0 bg-secondary bg-opacity-75 m-3 p-3">
           <a href="/specifiXXX.html?id=${product.id}">
@@ -80,8 +48,6 @@ export async function listingCardsIn() {
           </a>
         </div>
       </div>
-          
-          
           `;
     });
   } catch (error) {
@@ -99,20 +65,3 @@ export function loginSuccess() {
     }, 2200)
   }
 }
-
-//Rest of form
-/* <form class="d-flex justify-content-evenly bg-primary rounded align-content-end my-2 mx-3">
-            <div class="mb-3 w-25 align-bottom">
-              <label for="userBid" class="form-label">BID</label>
-              <input type="number" class="form-control" id="user-bid" aria-describedby="userBid" />
-              <div id="biddingHelp" class="form-text">Add amount in CYBID credits</div>
-            </div>
-            <div class="mb-3 w-25 align-bottom">
-              <label for="availableCredit" class="form-label"><img class="w-25"
-                  src="/assets/vectors/heartLogo_green.png" alt="Cybid credit icon" />
-                CREDITS</label>
-              <input type="text" class="form-control" id="cybidCredits" />
-            </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-              <button class="btn btn-outline-success m-3" type="submit">BID</button>
-          </form> */

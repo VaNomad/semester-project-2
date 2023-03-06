@@ -22,9 +22,7 @@ export async function specificXXX() {
 
   try {
     const response = await fetch(url, data);
-
     const results = await response.json();
-
     const bids = results.bids;
 
     bids.forEach((value) => {
@@ -42,10 +40,7 @@ export async function specificXXX() {
                         </div>
                       </div>
                     </div>
-
-
       `;
-      
     })
 
     const specificImg1 = document.querySelector("#specificImg1");
@@ -62,8 +57,6 @@ export async function specificXXX() {
 
     const specificImg5 = document.querySelector("#specificImg5");
     specificImg5.src = results.media[4];
-    
-    
 
     if (!response.ok) {
       const msg = displayListingError();
@@ -74,7 +67,6 @@ export async function specificXXX() {
       }, 2200);
     }
 
-      
     const title = document.querySelector("#title");
     title.innerHTML = results.title;
 
@@ -139,8 +131,5 @@ export async function specificXXX() {
     
   } catch (error) {
     console.log('error');
-    
   }
-  
-   
 }

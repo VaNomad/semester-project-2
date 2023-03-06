@@ -11,7 +11,6 @@ export function get(key) {
   }
 }
 
-
 export function remove(key) {
   localStorage.removeItem(key);
 }

@@ -1,13 +1,9 @@
 import { loginUser } from "../auth/login.mjs";
 import { displayLoginError, displayRegisterSuccess} from "../ui/displayError.mjs";
-// import { displayLoginSuccess } from "../ui/displayError.mjs";
-// import { get } from "../storage/localstorage.mjs";
 const registerMsg = document.querySelector("#regSuccess");
-
 
 export function loginFormListener() {
   const loginForm = document.querySelector("#loginForm");
-  // const loginMsg = document.querySelector("#loginMsg");
   const loginError = document.querySelector("#loginError");
 
   if (loginForm) {
@@ -16,12 +12,10 @@ export function loginFormListener() {
       const form = event.target;
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
-      console.log(data);
-      
   
       try {
         const response = await loginUser(data);
-        // window.location.href = url;
+
         if (response.ok) {
           window.location.replace("/indexIn.html?_loginSuccess=true");
           
@@ -32,13 +26,11 @@ export function loginFormListener() {
                                         
           setTimeout(() => {
               window.location = "/login.html";
-              }, 3500);
-                                
+          }, 3500);
         }
       } catch (error) {
         displayLoginError(loginForm, error);
       }
-  
     });
   }
 }
@@ -50,6 +42,5 @@ export function registerSuccess() {
     setTimeout(() => {
       registerMsg.remove();
     }, 3000)
-
   } 
 }
