@@ -1,4 +1,6 @@
 # semester-project-2
+<img width="1439" alt="cybid" src="https://github.com/VaNomad/semester-project-2/assets/77972892/dd6a1b46-7c2d-4eff-87e7-23c82e91a72b">
+
 
 ## Description
 
